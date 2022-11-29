@@ -1,0 +1,19 @@
+{
+    "jobs": [{
+            "title": "Garbage Truck Driver",
+            "location": "West Palm Beach, FL, US",
+            "hours": "Full-Time",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi. Sit amet dictum sit amet justo donec enim. Lobortis mattis aliquam faucibus purus in massa tempor. Interdum velit laoreet id donec. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Mi quis hendrerit dolor magna eget. Fermentum dui faucibus in ornare quam viverra orci sagittis eu. Sodales neque sodales ut etiam sit amet nisl. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. A diam sollicitudin tempor id eu nisl nunc mi ipsum. Arcu non sodales neque sodales. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla.",
+            "qualifications": ["CDL", "2-5 years of driving experience"],
+            "responsibilities": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi. Sit amet dictum sit amet justo donec enim. Lobortis mattis aliquam faucibus purus in massa tempor. Interdum velit laoreet id donec. Cum sociis natoque penatibus et magnis dis parturient montes nascetur."
+        },
+        {
+            "title": "Maintenance Control Specialist",
+            "location": "West Palm Beach, FL, US",
+            "hours": "Part-Time",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi. Sit amet dictum sit amet justo donec enim. Lobortis mattis aliquam faucibus purus in massa tempor. Interdum velit laoreet id donec. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Mi quis hendrerit dolor magna eget. Fermentum dui faucibus in ornare quam viverra orci sagittis eu. Sodales neque sodales ut etiam sit amet nisl. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. A diam sollicitudin tempor id eu nisl nunc mi ipsum. Arcu non sodales neque sodales. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla.",
+            "qualifications": ["CDL", "2-5 years of driving experience"],
+            "responsibilities": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi. Sit amet dictum sit amet justo donec enim. Lobortis mattis aliquam faucibus purus in massa tempor. Interdum velit laoreet id donec. Cum sociis natoque penatibus et magnis dis parturient montes nascetur."
+        }
+    ]
+}

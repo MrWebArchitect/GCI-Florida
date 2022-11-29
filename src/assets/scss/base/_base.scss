@@ -1,0 +1,38 @@
+//global body font
+body{
+    font-family: 'Hind Vadodara', sans-serif;
+    h1,h2{
+        font-family: 'Overpass', sans-serif;
+        font-weight: 900;
+        font-style:normal;
+    }
+}
+
+//Company Logo Font Family
+.logo-font{
+    font-family: ethnocentric, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+//any link or the primary-blue class will display the "Goode" blue color
+a,.primary-blue{
+    color: $p-blue;
+}
+
+.primary-red{
+    color: $p-red;
+}
+
+
+//jobs backround color will fade on hover
+.jobs { 
+  
+    transition: all .4s ease-in;
+    
+}
+
+.jobs:hover { 
+    background: $gray-300;
+}
+

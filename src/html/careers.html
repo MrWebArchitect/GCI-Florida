@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{> header/head title="Join Our Team"}}
+<body>
+    <!-- Navbar -->
+    {{> navbar/navbar}}
+
+    <!-- Main Content -->
+    {{#each careers.jobs}}
+    <div class="border p-3 m-3 jobs">
+        <h2><a href="#">{{title}}</a></h2>
+        <div class="d-flex">
+            <div class="location"><i class="bi bi-geo-alt"></i>{{location}}</div>
+            <i class="bi bi-dot mx-2"></i>
+            <div class="hours primary-red">{{hours}}</div>
+        </div>
+    </div>
+    {{/each}}
+
+       <!-- Footer -->
+    {{>footer/footer}}
+</body>
+</html>

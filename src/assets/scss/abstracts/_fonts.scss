@@ -1,0 +1,9 @@
+// Import font-family: ethnocentric, sans-serif; font-weight: 400; font-style: normal;
+@import url("https://use.typekit.net/saq2lvr.css");
+
+//Import Overpass and Hind Vadodar Fonts from Google Fonts  font-family: 'Overpass', sans-serif;  font-family: 'Hind Vadodara', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara&family=Overpass:wght@400;900&display=swap');
+
+//import bootstrap font icons
+$bootstrap-icons-font-dir: "../fonts";
+@import '~bootstrap-icons/font/bootstrap-icons.scss';

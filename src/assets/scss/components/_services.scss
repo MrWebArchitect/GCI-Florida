@@ -1,0 +1,67 @@
+
+   /*Services List Styles*/
+   .ol {
+	list-style: none;
+	padding: 1.5rem;
+	border: 0.1rem solid darkgray;
+	columns: 20rem;
+	column-gap: 4rem;
+	column-rule: 0.2rem dotted $p-red;
+	border-radius: 0.5rem;
+}
+
+.li {
+	--y: calc(100% - 2rem);
+	display: grid;
+	grid-template-columns: minmax(3.75em, auto) 1fr;
+	gap: 0 0.5em;
+	break-inside: avoid;
+  page-break-inside: avoid;
+	background: radial-gradient(circle at 30% var(--y), rgb(50 50 50), rgb(0 0 0));
+	color: white;
+	border-radius: 0.75rem;
+	overflow: hidden;
+	box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 0.17)
+}
+
+.li + .li {
+	margin-top: 1rem;
+}
+
+
+.li::before {
+	counter-increment: list-item 1;
+	content: counter(list-item);
+	font-weight: 700;
+	font-size: 4.5em;
+	letter-spacing: -0.125em;
+	line-height: 1;
+	color: $p-red;
+	grid-column: 1;
+	grid-row: span 2;
+	align-self: end;
+	margin: 0 0 -0.15em -0.15em;
+}
+
+.li span {
+	grid-column: 2;
+}
+
+.li span:first-of-type {
+	font-size: 1rem;
+	padding-top: 1rem;
+}
+
+/*Full Bleed Background*/
+.full-bleed{
+    box-shadow: 0 0 0 100vmax #ced4da;
+    clip-path: inset(0 -100vmax);
+}
+
+
+//OffSet Anchors to account for sticky navbar
+#residential, #business, #roll-off{
+	visibility: hidden;
+	position: relative;
+	top:-75px;
+}

@@ -1,19 +1,67 @@
 {
     "jobs": [{
-            "title": "Garbage Truck Driver",
+            "title": "Helper",
             "location": "West Palm Beach, FL, US",
             "hours": "Full-Time",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi. Sit amet dictum sit amet justo donec enim. Lobortis mattis aliquam faucibus purus in massa tempor. Interdum velit laoreet id donec. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Mi quis hendrerit dolor magna eget. Fermentum dui faucibus in ornare quam viverra orci sagittis eu. Sodales neque sodales ut etiam sit amet nisl. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. A diam sollicitudin tempor id eu nisl nunc mi ipsum. Arcu non sodales neque sodales. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla.",
+            "description": "As a Helper, you will play a crucial role in supporting our CDL drivers in the efficient and safe transportation of goods. Your assistance and attention to detail will contribute to the overall success of our logistics operations.",
             "qualifications": ["CDL", "2-5 years of driving experience"],
-            "responsibilities": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi. Sit amet dictum sit amet justo donec enim. Lobortis mattis aliquam faucibus purus in massa tempor. Interdum velit laoreet id donec. Cum sociis natoque penatibus et magnis dis parturient montes nascetur."
+            "responsibilities": [
+                "Assisting CDL drivers in loading, unloading, and transporting goods.",
+                "Ensuring the safe and secure handling of cargo during loading and unloading processes.",
+                "Following instructions from CDL drivers regarding the organization and placement of goods within the vehicle.",
+                "Checking and verifying the accuracy of goods being loaded or unloaded.",
+                "Operating equipment and tools necessary for loading and unloading activities, such as forklifts, pallet jacks, or hand trucks.",
+                "Maintaining cleanliness and orderliness of the work area, including the vehicle and loading docks.",
+                "Collaborating with CDL drivers to ensure timely and efficient transportation of goods.",
+                "Monitoring and reporting any issues or damages related to the cargo or equipment.",
+                "Adhering to safety regulations and procedures at all times.",
+                "Assisting in the inspection and maintenance of vehicles and equipment used in the transportation process.",
+                "Providing support to CDL drivers as needed during the transportation journey.",
+                "Communicating effectively with team members and supervisors to ensure smooth operations."
+              ]
         },
         {
-            "title": "Maintenance Control Specialist",
+            "title": "CDL Driver",
             "location": "West Palm Beach, FL, US",
-            "hours": "Part-Time",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi. Sit amet dictum sit amet justo donec enim. Lobortis mattis aliquam faucibus purus in massa tempor. Interdum velit laoreet id donec. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Mi quis hendrerit dolor magna eget. Fermentum dui faucibus in ornare quam viverra orci sagittis eu. Sodales neque sodales ut etiam sit amet nisl. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. A diam sollicitudin tempor id eu nisl nunc mi ipsum. Arcu non sodales neque sodales. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla.",
+            "hours": "Full-Time",
+            "description": "Pickup and deliver roll off dumpsters. Adhere to safety policies and directions. Cleans loose trash off of truck and/or ground around truck and container that spills during dumping process to maintain clean customer site and safety along roads and highways.",
+            "qualifications": ["High School Diploma or GED Preferred",
+                               " Must be able to submit and pass a DOT pre-employment drug test",
+                               "Two Years or Equivalent Commercial Truck Driving Experience Required",
+                               "Valid Class A or B CDL with Air Brakes Required",
+                               "No More than One Moving Violation or Accident (within last 36 months)",
+                               "No Suspensions or Revocations due to a Moving Violation or Accident, and No DUI /DWI Infractions (within last 36 months)"
+                              ],
+            "responsibilities": ["Drive and operate trucks",
+                                 "Follow instructions, locate and read location road maps",
+                                 "Pre-inspect truck",
+                                 "Pick up goods and materials, verify loads for accuracy, and deliver them as instructed",
+                                 "Load and unload cargo",
+                                 "Responsible for basic vehicle maintenance; comply with all safe work practices, policies, and processes at all times"
+                                 ]
+            
+
+        },
+        {
+            "title": "Maintenance Technician",
+            "location": "West Palm Beach, FL, US",
+            "hours": "Full-Time",
+            "description": "We are seeking a skilled Maintenance Technician to join our team. As a Maintenance Technician, you will play a crucial role in maintaining and repairing vehicles and equipment.",
             "qualifications": ["CDL", "2-5 years of driving experience"],
-            "responsibilities": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi. Sit amet dictum sit amet justo donec enim. Lobortis mattis aliquam faucibus purus in massa tempor. Interdum velit laoreet id donec. Cum sociis natoque penatibus et magnis dis parturient montes nascetur."
+            "responsibilities": ["Works under limited supervision and selects from written instructions and established procedures to accomplish assigned tasks",
+                                 "Performs repairs and assigned preventive maintenance services",
+                                 "Performs inspection, diagnosis and repair of electrical, hydraulic, suspension, brake and air systems on vehicles and equipment",
+                                 "Utilizes vehicle computer electronics systems to interpret failure modes to initiate or assign repairs",
+                                 "Estimates time and material costs on vehicle repairs and requisitions new parts",
+                                 "Performs all work within Standard Repair Times (SRTs)",
+                                 "Performs service calls for emergency breakdowns",
+                                 "Conducts safety checks on vehicles",
+                                 "Completes required paperwork utilizing fleet maintenance software program associated with repairing vehicles, documenting parts usage, and accounting for repair times",
+                                 "Assists senior technicians in the completion of project work",
+                                 "Reviews, completes or assigns repairs identified on Driver Vehicle Inspection Reports",
+                                 "Maintains a clean, safe work area in compliance with Corporate / OSHA Standards, and performs all work in accordance with established safety procedures"]
+            
+        
         }
     ]
 }

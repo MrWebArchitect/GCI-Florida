@@ -2,10 +2,12 @@
 import 'bootstrap';
 
 //Components 
-import './components/aos';
-import './components/swiper';
-import './components/nav';
-//import './components/multer'
-
-//theme misc
 import './misc';
+import './components/aos';
+import './components/job-description';
+import './components/form-validation';
+import './components/contact-form';
+import './components/apply';
+import './components/swiper';
+import './components/navbar';
+//import './components/multer'

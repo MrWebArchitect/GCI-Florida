@@ -1,3 +1,64 @@
 .dropdown-menu{
     box-shadow: $box-shadow-lg;
 }
+
+.dropdown-toggle{
+    position: relative;
+
+    &:after{
+        border: 0;
+        font-family:'Bootstrap-icons';
+        font-style: normal;
+        content: "\F229";
+        margin: 0 !important;
+        font-size: .4rem;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+    }
+
+    &.show{
+        &:after{
+            content: "\F231";
+        }
+    } 
+}
+
+.dropdown-toggle{
+    padding-right: 0.5rem !important;
+}
+
+.dropdown-heading{
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 80%;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-family: ethnocentric, sans-serif;
+}
+
+.dropdown-paragraph .dropdown-link{
+    font-size:75%;
+    font-family: 'Overpass', sans-serif;
+}
+
+@include media-breakpoint-up(lg){
+    .dropdown-megamenu{
+        width: 100%;
+        right: 0;
+        left: 0;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        background: $white;
+        margin: 0 !important;
+        border: 0 !important;
+        border-top: 1px solid $border-color !important;
+        box-shadow: 0 1.5rem 31px -17px rgb(22 28 45 / 8%);
+    }
+    
+    .dropdown-megamenu.show{
+        animation: fadeInUp .4s;
+    }
+}

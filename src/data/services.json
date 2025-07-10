@@ -1,0 +1,25 @@
+{
+    "entries": [
+        {
+            "img": "{{webRoot}}/assets/images/residential-service.png",
+            "title": "Residential Waste Pickup",
+            "paragraph": "GCI's curbside trash and recycling pickup is the best choice for your home, and for the environment.",
+            "link-text": "Get Residential Waste Service",
+            "link": "services.html#residential"
+        },
+        {
+            "img": "{{webRoot}}/assets/images/business-service.png",
+            "title": "Business Waste Pickup",
+            "paragraph": "Take care of business, we'll take care of the waste. Chose GCI for reliable, responsible business waste pickup.",
+            "link-text": "Get Business Waste Service",
+            "link": "services.html#business"
+        },
+        {
+            "img": "{{webRoot}}/assets/images/rolloff-service.png",
+            "title": "Roll-Off Dumpster Rental",
+            "paragraph": "From quick cleanouts to major renovations, GCI has a dumpster that's perfect for your project.",
+            "link-text": "Rent a Roll-Off Dumpster",
+            "link": "services.html#roll-off"
+        }
+    ]
+}

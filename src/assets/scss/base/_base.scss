@@ -1,11 +1,21 @@
 //global body font
 body{
     font-family: 'Hind Vadodara', sans-serif;
-    h1,h2{
-        font-family: 'Overpass', sans-serif;
-        font-weight: 900;
+    h2,h6{
+        font-family: 'ethnocentric', sans-serif;
         font-style:normal;
     }
+
+    h1{
+        font-family: 'Overpass', sans-serif;
+        font-style: normal;
+    }
+
+    p{
+        font-size: 1.1rem;
+    }
+
+    min-height: 100vh;
 }
 
 //Company Logo Font Family
@@ -36,3 +46,9 @@ a,.primary-blue{
     background: $gray-300;
 }
 
+.services-image{
+    transform:translate(-50%,-50%);
+    position: absolute;
+    z-index: 30;
+    top:5%;
+}

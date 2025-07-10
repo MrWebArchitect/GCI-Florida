@@ -1,18 +1,15 @@
-const path = require('path')
 const express = require('express')
+const app = express()
 
-const app = express(),
-            DIST_DIR = __dirname,
-            HTML_FILE = path.join(DIST_DIR, 'index.html')
+const PORT = process.env.PORT || 5000;
 
-app.use(express.static(DIST_DIR))
+//Middleware
+app.use(express.static)
 
-app.get('*', (req, res) => {
-    res.sendFile(HTML_FILE)
+app.get('/', (req,res) => {
+    res.send('hello')
 })
 
-const PORT = process.env.PORT || 8080
-
 app.listen(PORT, () => {
-    console.log(`App listening to ${PORT}...`)
+    console.log(`Server running on port ${PORT}`)
 })

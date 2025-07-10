@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Header -->
+{{> header/head title="Frequently Asked Questions"}}
+
+<body>
+    <!-- Navbar-->
+    {{> navbar/navbar
+    configClassList=config.classes.navbar
+    classList="border-bottom"}}
+    <!-- /Navbar-->
+
+    <!-- Main Section-->
+    <main class="{{config.classes.content}}">
+        <!-- Page Title-->
+        <div class="container">
+            <header class="pt-10 text-center col-12 col-sm-9 col-lg-7 col-xl-6 mx-auto">
+                <h1 class="fw-bold mb-3 text-uppercase">Frequently Asked Questions</h1>
+                <p class="text-muted mb-0">
+                    We will try to answer frequently asked questions about our products and services here. If, after reading this page, you still have unanswered questions or concerns, please visit the contact page and send us a message. 
+                </p>
+    
+            </header>
+        
+        <!--/Page Title-->
+        <!-- Accordion-->
+        <div class="mx-auto mt-5 py-5 col-12 col-md-8 col-lg-6 col-xl-5">
+            {{> widgets/accordion}}
+        </div>
+        
+        <!--/Accordion-->
+        </div>
+    </main>
+        <!-- /Main Section-->
+
+        <!-- Footer -->
+        {{>footer/footer}}
+        <!-- /Footer -->
+</body>
+
+</html>

@@ -1,9 +1,75 @@
-<footer class="bg-dark pt-10 pb-8 {{configClassList}} {{classList}}">
-    <!-- Footer Menus -->
+<footer class="bg-primary pb-8 {{configClassList}} {{classList}}">
+    <div class="container pt-3">
+        <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-center border-bottom border-white-10">
+            <!--Footer Logo-->
+            <a class="d-flex align-items-center lh-1 text-white transition-opacity opacity-50-hover text-decoration-none mb-4 mb-md-0"
+                href="#">
+                <span class="f-w-20 mb-3 d-block">
+                    {{> logo/logo-icon-white}}
+                </span>
+            </a>
+            <!--/Footer Logo-->
+            <!-- Footer socials-->
+            <ul class="list-unstyled d-flex align-items-center justify-content-end">
+                <li class="ms-5"><a class="text-white text-decoration-none opacity-50-hover transition-opacity"
+                        href="https://www.facebook.com/goodecompaniesofflorida"><i class="bi bi-facebook"></i></a></li>
+                <li class="ms-5"><a class="text-white text-decoration-none opacity-50-hover transition-opacity"
+                        href="https://www.instagram.com/gciflorida"><i class="bi bi-instagram"></i></a></li>
+            </ul>
+            <!--/Footer socials-->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between mt-5 mt-lg-7">
+            <!-- Menu One  -->
+            <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
+                <h6 class="footer-heading">Products & Services</h6>
+                <ul class="footer-nav list-unstyled">
+                    <li><a href="{{webroot}}/services.html#residential">Waste Disposal &amp; Recycling</a></li>
+                    <li><a href="{{webroot}}/services.html#business">Construction Waste Disposal</a></li>
+                    <li><a href="{{webroot}}/services.html#roll-off">Roll-Off Dumpster Rental</a></li>
+                </ul>
+            </div>
+            <!-- Menu Two-->
+            <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
+                <h6 class="footer-heading">Customer Support</h6>
+                <ul class="footer-nav list-unstyled">
+                    <li><a href="https://goodecompanies.haulerhero.com" target="_blank">Pay My Bill</a></li>
+                    <li><a href="{{webroot}}/contact.html">Customer Support</a></li>
+                </ul>
+            </div>
+            <!-- Menu Three-->
+            <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
+                <h6 class="footer-heading">Quick Info</h6>
+                <ul class="footer-nav list-unstyled">
+                    <li><a href="{{webroot}}/faq.html">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+            <!-- Menu Four  -->
+            <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
+                <h6 class="footer-heading">Work with Us</h6>
+                <ul class="footer-nav list-unstyled">
+                    <li><a href="{{webroot}}/careers.html">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Footer bottom -->
+    <div class="container">
+        <div class="border-top pt-6 mt-7 border-white-10 d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <span class="small text-white opacity-50 mb-2 md-0">All rights reserved &copy 2023 Goode Companies, Inc.</span>
+            <span class="small text-white opacity-50">Terms of service | Security policy</span>
+        </div>
+    </div>
+
 </footer>
 
-    <!--Vendor JS-->
-    <script src="{{webRoot}}/assets/js/vendor.bundle.js"></script>
+<!--Vendor JS-->
+<script src="{{webRoot}}/assets/js/vendor.bundle.js"></script>
 
-    <!--Theme JS-->
-    <script src="{{webRoot}}/assets/js/theme.bundle.js"></script>
+<!--Theme JS-->
+<script src="{{webRoot}}/assets/js/theme.bundle.js"></script>
+

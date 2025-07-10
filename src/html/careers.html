@@ -3,12 +3,14 @@
     {{> header/head title="Join Our Team"}}
 <body>
     <!-- Navbar -->
-    {{> navbar/navbar}}
-
+    {{> navbar/navbar
+        configClassList=config.classes.navbar
+        classList="border-bottom"}}
+    <!-- /Navbar -->
     <!-- Main Content -->
     {{#each careers.jobs}}
     <div class="border p-3 m-3 jobs">
-        <h2><a href="#">{{title}}</a></h2>
+        <h2 class="career-title"><a href="javascript:void(0);" onclick="selectJob('{{title}}')">{{title}}</a></h2>
         <div class="d-flex">
             <div class="location"><i class="bi bi-geo-alt"></i>{{location}}</div>
             <i class="bi bi-dot mx-2"></i>
@@ -19,5 +21,12 @@
 
        <!-- Footer -->
     {{>footer/footer}}
+
+    <script>
+        function selectJob(jobTitle){
+            localStorage.setItem("selectedJobTitle", jobTitle);
+            window.location.href="job-description.html";
+        }
+    </script>
 </body>
 </html>

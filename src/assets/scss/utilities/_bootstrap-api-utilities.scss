@@ -23,7 +23,20 @@ $utilities: map-merge($utilities,
             values: $fixed-sizes),
         "align": map-merge(map-get($utilities, "align"),
             (values: append(map-get(map-get($utilities, "align"), "values"), sub))),
-
+        
+        //width
+        "width": map-merge(
+            map-get($utilities, "width"),
+            (
+                responsive: true,
+                values: map-merge(
+                    map-get(map-get($utilities, "width"), "values"),(
+                        10: 10%,
+                        20: 20%
+                    )
+                )
+            )
+        ),
         //letter spacing
         "letter-spacing":(property: letter-spacing,
             class: tracking,
@@ -43,4 +56,52 @@ $utilities: map-merge($utilities,
                 state: hover,
                 values: map-merge(map-get(map-get($utilities, "opacity"), "values"), (5: .05,
                         10: .10,
-                        90: .9)))), ));
+                        90: .9)))),
+        "border-white":(
+            property: border-color,
+            class: border-white,
+            values:(
+                10: rgba(255,255,255, .10),
+                25: rgba(255,255,255, .25),
+                50: rgba(255,255,255, .50),
+                75: rgba(255,255,255, .75),
+                90: rgba(255,255,255, .90) 
+            )
+        ),
+        "font-weight": map-merge(
+            map-get($utilities, "font-weight"),
+            (
+                values: map-merge(
+                    map-get(map-get($utilities, "font-weight"), "values"), (
+                        black: 800,
+                        medium: 500
+                    )
+                )
+            )
+        ),
+        "rotate": (
+            property: transform,
+            values: (
+                12: rotate(12deg),
+                n12: rotate(-12deg),
+                45: rotate(45deg),
+                n45: rotate(-45deg),
+                90: rotate(90deg),
+                n90: rotate(-90deg),
+                180: rotate(180deg),
+                n180: rotate(-180deg)
+            )
+        ),
+        "rounded": map-merge(
+            map-get($utilities, "rounded"),
+            (
+                values: map-merge(
+                    map-get(map-get($utilities, "rounded"), "values"),(
+                        4: $border-radius-xl,
+                        5: $border-radius-xxl
+                    )
+                )
+            )
+        ),                
+    )
+);

@@ -33,6 +33,7 @@ const paths = {
         fonts: './src/assets/fonts',
         js: './src/assets/js',
         favicon: './src/assets/favicon',
+        html: './src/html', // added for HTML files
     },
     dist: {
         imgs: './assets/images',
@@ -56,7 +57,21 @@ const wPackConfig = {
     devtool: 'source-map',
     mode: 'development',
     module: {
-        rules: [{
+        rules: [
+          {
+            test: /\.hbs$/,
+            use: {
+              loader: 'handlebars-loader',
+            },
+          },
+          {
+            test: /\.html$/,
+            include: path.resolve(__dirname, paths.src.html.slice(2)), // added for HTML files
+            use: {
+              loader: 'html-loader', // added for HTML files
+            },
+          },
+          {
             test: /\.(sass|scss|css)$/,
             include: path.resolve(__dirname, paths.src.scss.slice(2)),
             use: [{
@@ -86,7 +101,7 @@ const wPackConfig = {
             ],
         }, ]
     },
-    optimization: {
+    optimization:{
         splitChunks: {
           cacheGroups: {
             vendor: {
@@ -145,7 +160,7 @@ const wPackConfig = {
             ],
         }),
         new HandlebarsPlugin({
-            entry: path.join(process.cwd(), 'src', 'html', '**', '*.html'),
+            entry: path.join(process.cwd(), 'src', 'html' ,'**', '*.html'),
             output: path.join(process.cwd(), 'dist', '[path]', '[name].html'),
             partials: [path.join(process.cwd(), 'src', 'partials', '**', '*.{html,svg}')],
             data: projectData,

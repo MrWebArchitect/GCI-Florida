@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Header -->
+{{> header/head title="Contact Us"}}
+
+<body>
+    <!-- Navbar-->
+    {{> navbar/navbar
+    configClassList=config.classes.navbar
+    classList="border-bottom"}}
+    <!-- /Navbar-->
+
+    <!-- Main Section-->
+    <main class="mt-0">
+
+        <!-- Page Title-->
+        <header class="pt-10">
+            <div class="container">
+                <div class="text-center col-12 col-sm-9 col-lg-7 col-xl-6 mx-auto position-relative z-index-20">
+                    <h1 class="display-3 fw-bold mb-3">Contact us</h1>
+                    <p class="text-muted lead mb-0">Send us a message using the form below for any questions you may
+                        have.</p>
+                </div>
+            </div>
+        </header>
+        <!-- / Page Title-->
+
+        <!-- Contact Details & Form-->
+
+        <!-- Contact Form-->
+        <div class="container">
+            <div class="row gx-10 my-10 pt-5">
+                <!-- Contact Form -->
+                <div class="col-12 col-lg-8">
+                    <p class="mb-3 small fw-bolder tracking-wider text-uppercase text-primary">Get in touch</p>
+                    <h1 class="display-6 fw-bold mb-6">Send us a message</h1>
+
+                    <form class="needs-validation form-contact" id="contact-form" method="post" novalidate>
+                        <div class="row g-5">
+                            <div class="col-12 col-md-6">
+                                <!-- Name-->
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="John Doe"
+                                    required>
+                                <div class="invalid-feedback">
+                                    Name field must not be blank
+                                </div>
+                                <!-- / Name-->
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <!-- Email-->
+                                <label for="email" class="form-label">Email</label>
+                                <input class="form-control" type="email" id="email" name="email"
+                                    placeholder="johndoe@email.com" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address
+                                </div>
+                                <!-- / Email-->
+                            </div>
+                            <div class="col-12 col-md-6">
+
+
+                                <!-- Company Name-->
+                                <label for="company" class="form-label">Company</label>
+                                <input type="text" class="form-control" id="company" name="company"
+                                    placeholder="Company Name">
+                                <!-- / Company Name-->
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <!-- Telephone-->
+                                <label for="phone-number" class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" id="telephone" name="telephone"
+                                    onkeydown="phoneNumberFormatter()" placeholder="(123)123-1234" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid phone number
+                                </div>
+                                <!-- / Telephone-->
+                            </div>
+                            <div class="col-12">
+
+                                <!-- Message -->
+                                <label for="message">Message:</label>
+                                <textarea class="form-control" id="message" name="about" cols="30" rows="10"
+                                    required></textarea>
+                                <div class="invalid-feedback">
+                                    The message field cannot be blank
+                                </div>
+                                <!-- / Message -->
+                            </div>
+                            <div class="col-12 justify-content-end d-flex">
+                                <!-- Submit btn-->
+                                <button class="btn btn-primary" type="submit">Send Message</button>
+                                <!-- / Submit Btn-->
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <!-- /Contact Details -->
+                <div class="col-12 col-lg-4 mt-5 mt-lg-0">
+                    <p class="mb-4 small fw-bolder tracking-wider text-uppercase text-primary">Find us online</p>
+                    <ul class="list-unstyled mb-5">
+                        <li><i class="bi bi-facebook me-3 bi-lg"></i> <a class="text-muted"
+                                href="https://www.facebook.com/goodecompaniesofflorida">Facebook</a></li>
+                        <li><i class="bi bi-instagram me-3 bi-lg"></i> <a class="text-muted"
+                                href="https://www.instagram.com/gciflorida">Instagram</a></li>
+                    </ul>
+                    <p class="mb-4 small fw-bolder tracking-wider text-uppercase text-primary">Our head office</p>
+                    <p>1125 Old Dixie Hwy. Suite 9, Lake Park, FL</p>
+                </div>
+                <!-- /Contact Details -->
+            </div>
+        </div>
+        <!-- /Page Content -->
+    </main>
+    <!-- / Main Section-->
+
+    <!-- Footer -->
+    {{>footer/footer}}
+    <script>
+        function formatPhoneNumber(value) {
+            // if the input value is false then return
+            if (!value) return value;
+
+            // clean the input for any non-digit values
+            const phoneNumber = value.replace(/[^\d]/g, '');
+
+            //phoneNumberLength is used to know when to apply formatting
+            const phoneNumberLength = phoneNumber.length;
+
+            if (phoneNumberLength < 4) return phoneNumber;
+
+            if (phoneNumberLength < 7) {
+                return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(3)}`;
+            }
+
+            return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(
+        3,
+        6,
+    )}-${phoneNumber.slice(6,9)}`;
+
+        }
+
+        function phoneNumberFormatter() {
+            //grab the users typed input value
+            const inputField = document.getElementById('telephone');
+
+            //format phone number with formatPhoneNumber function
+            const formattedInputValue = formatPhoneNumber(inputField.value);
+
+            //set the value of the input field to the formmated value
+            inputField.value = formattedInputValue;
+        }
+    </script>
+
+
+
+    <!-- /Footer -->
+</body>
+
+</html>

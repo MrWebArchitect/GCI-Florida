@@ -1,6 +1,7 @@
 <footer class="bg-primary pb-8 {{configClassList}} {{classList}}">
     <div class="container pt-3">
-        <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-center border-bottom border-white-10">
+        <div
+            class="d-flex flex-column flex-md-row justify-content-md-between align-items-center border-bottom border-white-10">
             <!--Footer Logo-->
             <a class="d-flex align-items-center lh-1 text-white transition-opacity opacity-50-hover text-decoration-none mb-4 mb-md-0"
                 href="#">
@@ -56,11 +57,13 @@
         </div>
     </div>
 
-    
+
     <!-- Footer bottom -->
     <div class="container">
-        <div class="border-top pt-6 mt-7 border-white-10 d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <span class="small text-white opacity-50 mb-2 md-0">All rights reserved &copy 2023 Goode Companies, Inc.</span>
+        <div
+            class="border-top pt-6 mt-7 border-white-10 d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <span class="small text-white opacity-50 mb-2 md-0">All rights reserved &copy <span
+                    id="current-year"></span> Goode Companies, Inc.</span>
             <span class="small text-white opacity-50">Terms of service | Security policy</span>
         </div>
     </div>
@@ -72,4 +75,3 @@
 
 <!--Theme JS-->
 <script src="{{webRoot}}/assets/js/theme.bundle.js"></script>
-

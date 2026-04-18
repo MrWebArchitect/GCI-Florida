@@ -1,0 +1,71 @@
+.content-section {
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @media (min-width: 992px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    // Form Wrapper
+    form {
+        background-color: $white;
+        border: 1px solid $border-color;
+        border-radius: $border-radius-xl;
+        box-shadow: $box-shadow;
+        padding: 2rem;
+
+        .form-control {
+            border-radius: 0.5rem;
+            border-color: $input-border-color;
+            transition: border-color 0.2s ease, box-shadow 0.2 ease;
+
+            &:focus {
+                border-color: $primary;
+                box-shadow: 0 0 0 0.2rem rgba($primary, 0.15);
+            }
+        }
+
+        button[type="submit"] {
+            min-width: 160px;
+            font-weight: 500;
+            box-shadow: $box-shadow-sm;
+            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+            &:hover {
+                transform: translateY(-1px);
+                box-shadow: $box-shadow-lg;
+            }
+        }
+    }
+}
+
+// ==============================
+// Success / Error Messages
+// ==============================
+
+.alert {
+    border-radius: $border-radius-xl;
+    box-shadow: $box-shadow-sm;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &.alert-success {
+        background-color: rgba($success, 0.1);
+        border: 1px solid $success;
+        color: $success;
+    }
+
+    &.alert-danger {
+        background-color: rgba($danger, 0.1);
+        border: 1px solid $danger;
+        color: $danger;
+    }
+}

@@ -28,13 +28,9 @@
         <!-- Contact Details & Form-->
 
         <!-- Contact Form-->
-        <div class="container">
-            <div class="row gx-10 my-10 pt-5">
-                <!-- Contact Form -->
-                <div class="col-12 col-lg-8">
-                    <p class="mb-3 small fw-bolder tracking-wider text-uppercase text-primary">Get in touch</p>
-                    <h1 class="display-6 fw-bold mb-6">Send us a message</h1>
-
+        <section class="contact-section">
+            <div class="container">
+                <div id="form-wrapper">
                     <form class="needs-validation form-contact" id="contact-form" method="post" novalidate>
                         <div class="row g-5">
                             <div class="col-12 col-md-6">
@@ -96,21 +92,39 @@
                         </div>
                     </form>
                 </div>
-                <!-- /Contact Details -->
-                <div class="col-12 col-lg-4 mt-5 mt-lg-0">
-                    <p class="mb-4 small fw-bolder tracking-wider text-uppercase text-primary">Find us online</p>
-                    <ul class="list-unstyled mb-5">
-                        <li><i class="bi bi-facebook me-3 bi-lg"></i> <a class="text-muted"
-                                href="https://www.facebook.com/goodecompaniesofflorida">Facebook</a></li>
-                        <li><i class="bi bi-instagram me-3 bi-lg"></i> <a class="text-muted"
-                                href="https://www.instagram.com/gciflorida">Instagram</a></li>
-                    </ul>
-                    <p class="mb-4 small fw-bolder tracking-wider text-uppercase text-primary">Our head office</p>
-                    <p>1125 Old Dixie Hwy. Suite 9, Lake Park, FL</p>
+                <div class="row gx-10 my-10 pt-5">
+                    <!-- Contact Form -->
+                    <div class="col-12 col-lg-8">
+                        <p class="mb-3 small fw-bolder tracking-wider text-uppercase text-primary">Get in touch</p>
+                        <h1 class="display-6 fw-bold mb-6">Send us a message</h1>
+
+                        <!-- Success & Error Message Placeholders -->
+                        <div id="form-alert" class="alert alert-success d-none" role="alert">
+                            Thank you for your message! Well get back to you soon.
+                        </div>
+
+                        <div id="form-error" class="alert alert-danger d-none" role="alert">
+                            Sorry, there was a problem sending your message. Please try again later.
+                        </div>
+                        <!-- /Placeholders-->
+                    </div>
+                    <!-- /Contact Details -->
+                    <div class="col-12 col-lg-4 mt-5 mt-lg-0">
+                        <p class="mb-4 small fw-bolder tracking-wider text-uppercase text-primary">Find us online</p>
+                        <ul class="list-unstyled mb-5">
+                            <li><i class="bi bi-facebook me-3 bi-lg"></i> <a class="text-muted"
+                                    href="https://www.facebook.com/goodecompaniesofflorida">Facebook</a></li>
+                            <li><i class="bi bi-instagram me-3 bi-lg"></i> <a class="text-muted"
+                                    href="https://www.instagram.com/gciflorida">Instagram</a></li>
+                        </ul>
+                        <p class="mb-4 small fw-bolder tracking-wider text-uppercase text-primary">Our head office</p>
+                        <p>1125 Old Dixie Hwy. Suite 9, Lake Park, FL</p>
+                    </div>
+                    <!-- /Contact Details -->
                 </div>
-                <!-- /Contact Details -->
             </div>
-        </div>
+        </section>
+
         <!-- /Page Content -->
     </main>
     <!-- / Main Section-->
@@ -131,13 +145,13 @@
             if (phoneNumberLength < 4) return phoneNumber;
 
             if (phoneNumberLength < 7) {
-                return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(3)}`;
+                return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
             }
 
-            return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(
-        3,
-        6,
-    )}-${phoneNumber.slice(6,9)}`;
+            return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
+                3,
+                6,
+            )}-${phoneNumber.slice(6, 9)}`;
 
         }
 

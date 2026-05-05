@@ -1,76 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<!-- Header -->
-{{> header/head title="Goode Companies, Inc."}}
+  <!-- Header -->
+  {{> header/head title="Goode Companies, Inc."}}
 
-<body>
-  <!-- Navbar -->
-  {{> navbar/navbar
-  configClassList=config.classes.navbar
-  classList="border-bottom"}}
-  <!-- /Navbar -->
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5QXXZM5V"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Main Content -->
-  <!-- Hero -->
-  {{> widgets/hero}}
-  <!-- /Hero -->
-  <div class="bg-light">
-    <div class="container py-7">
-      <!-- Our Mission -->
-      <div id="our-mission"></div>
-      <div class="py-6 row gx-8 align-items-center bg-light">
-        <div class="col-12 col-lg-6 text-center mx-auto">
-          <h2 class="mb-5 display-7" data-aos="fade-up">Our Mission</h2>
-          <p data-aos="fade-up">Goode Companies, founded in 1991, established its solid waste division as an
-            organization dedicated to
-            providing solid waste and recycling collection services for the individual, commercial and residential
-            community. The solid waste division focuses on providing its customers with the personal touch, timely
-            pickups and safest collection methods possible.</p>
+    <!-- Navbar -->
+    {{> navbar/navbar configClassList=config.classes.navbar
+    classList="border-bottom"}}
+    <!-- /Navbar -->
+
+    <!-- Main Content -->
+    <!-- Hero -->
+    {{> widgets/hero}}
+    <!-- /Hero -->
+    <div class="bg-light">
+      <div class="container py-7">
+        <!-- Our Mission -->
+        <div id="our-mission"></div>
+        <div class="py-6 row gx-8 align-items-center bg-light">
+          <div class="col-12 col-lg-6 text-center mx-auto">
+            <h2 class="mb-5 display-7" data-aos="fade-up">Our Mission</h2>
+            <p data-aos="fade-up">
+              Goode Companies, founded in 1991, established its solid waste
+              division as an organization dedicated to providing solid waste and
+              recycling collection services for the individual, commercial and
+              residential community. The solid waste division focuses on
+              providing its customers with the personal touch, timely pickups
+              and safest collection methods possible.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
+    <!-- /Our Mission -->
 
-  <!-- /Our Mission -->
+    <!-- Our Services -->
+    <div class="py-8">
+      <h2 class="mb-5 text-center display-7" data-aos="fade-up">
+        Sustainable Waste Services
+      </h2>
+      {{>widgets/services-tabs}}
+    </div>
+    <!-- /Our Services -->
 
-  <!-- Our Services -->
-  <div class="py-8">
-    <h2 class="mb-5 text-center display-7" data-aos="fade-up">Sustainable Waste Services</h2>
-    {{>widgets/services-tabs}}
-  </div>
-  <!-- /Our Services -->
-
-  <!-- Expectations-->
-  <div class="bg-light">
-    <div class="container">
-      <div class="py-6 row gx-8 align-items-center">
-        <div class="col-12 col-lg-6" data-aos="fade-right">
-          <picture>
-            <img class="img-fluid rounded shadow-sm" src="{{webRoot}}/assets/images/exceed-expectations-2.jpg"
-              loading="lazy" alt="{{ config.defaultImgAlt }}">
-          </picture>
-        </div>
-        <div class="col-12 col-lg-6" data-aos="fade-left">
-          <h2 class="my-sm-5 mt-lg-0 display-7">Exceeding Expectations</h2>
-          <p>We've valued our customers and employees since 1991, understanding that our success and longevity in the
-            waste industry is fueled by the loyalty and integrity of our local customers and the communities we serve.
-            GCI is committed to providing our customers with a safe, dependable, and environmentally responsible service
-            in this ever-changing environment by incorporating new technologies that will improve the solid waste and
-            recycling collection process. </p>
-          <a href="about.html">Learn More</a>
+    <!-- Expectations-->
+    <div class="bg-light">
+      <div class="container">
+        <div class="py-6 row gx-8 align-items-center">
+          <div class="col-12 col-lg-6" data-aos="fade-right">
+            <picture>
+              <img
+                class="img-fluid rounded shadow-sm"
+                src="{{webRoot}}/assets/images/exceed-expectations-2.jpg"
+                loading="lazy"
+                alt="{{ config.defaultImgAlt }}"
+              />
+            </picture>
+          </div>
+          <div class="col-12 col-lg-6" data-aos="fade-left">
+            <h2 class="my-sm-5 mt-lg-0 display-7">Exceeding Expectations</h2>
+            <p>
+              We've valued our customers and employees since 1991, understanding
+              that our success and longevity in the waste industry is fueled by
+              the loyalty and integrity of our local customers and the
+              communities we serve. GCI is committed to providing our customers
+              with a safe, dependable, and environmentally responsible service
+              in this ever-changing environment by incorporating new
+              technologies that will improve the solid waste and recycling
+              collection process.
+            </p>
+            <a href="about.html">Learn More</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- /Expectations-->
+    <!-- /Expectations-->
 
+    <!-- /Main Content-->
 
-  <!-- /Main Content-->
-
-  <!-- Footer -->
-  {{> footer/footer}}
-</body>
-
+    <!-- Footer -->
+    {{> footer/footer}}
+  </body>
 </html>

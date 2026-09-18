@@ -1,0 +1,45 @@
+#careers-hero {
+  min-height: 520px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba($primary, 0.96) 0%,
+      rgba($primary, 0.88) 32%,
+      rgba($primary, 0.55) 55%,
+      rgba($primary, 0.12) 78%,
+      rgba($primary, 0) 100%
+    ),
+    url("../images/careers/careers-header.png");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  h1 {
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+    line-height: 1.05;
+  }
+
+  p:not(.subtitle-sm) {
+    max-width: 600px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  #careers-hero {
+    background-position: 65% center;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba($primary, 0.97) 0%,
+        rgba($primary, 0.9) 55%,
+        rgba($primary, 0.55) 100%
+      ),
+      url("../images/careers/careers-header.png");
+
+    background-position: 65% center;
+    background-size: cover;
+  }
+}

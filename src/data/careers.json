@@ -1,67 +1,326 @@
 {
-    "jobs": [{
-            "title": "Helper",
-            "location": "West Palm Beach, FL, US",
-            "hours": "Full-Time",
-            "description": "As a Helper, you will play a crucial role in supporting our CDL drivers in the efficient and safe transportation of goods. Your assistance and attention to detail will contribute to the overall success of our logistics operations.",
-            "qualifications": ["CDL", "2-5 years of driving experience"],
-            "responsibilities": [
-                "Assisting CDL drivers in loading, unloading, and transporting goods.",
-                "Ensuring the safe and secure handling of cargo during loading and unloading processes.",
-                "Following instructions from CDL drivers regarding the organization and placement of goods within the vehicle.",
-                "Checking and verifying the accuracy of goods being loaded or unloaded.",
-                "Operating equipment and tools necessary for loading and unloading activities, such as forklifts, pallet jacks, or hand trucks.",
-                "Maintaining cleanliness and orderliness of the work area, including the vehicle and loading docks.",
-                "Collaborating with CDL drivers to ensure timely and efficient transportation of goods.",
-                "Monitoring and reporting any issues or damages related to the cargo or equipment.",
-                "Adhering to safety regulations and procedures at all times.",
-                "Assisting in the inspection and maintenance of vehicles and equipment used in the transportation process.",
-                "Providing support to CDL drivers as needed during the transportation journey.",
-                "Communicating effectively with team members and supervisors to ensure smooth operations."
-              ]
-        },
-        {
-            "title": "CDL Driver",
-            "location": "West Palm Beach, FL, US",
-            "hours": "Full-Time",
-            "description": "Pickup and deliver roll off dumpsters. Adhere to safety policies and directions. Cleans loose trash off of truck and/or ground around truck and container that spills during dumping process to maintain clean customer site and safety along roads and highways.",
-            "qualifications": ["High School Diploma or GED Preferred",
-                               " Must be able to submit and pass a DOT pre-employment drug test",
-                               "Two Years or Equivalent Commercial Truck Driving Experience Required",
-                               "Valid Class A or B CDL with Air Brakes Required",
-                               "No More than One Moving Violation or Accident (within last 36 months)",
-                               "No Suspensions or Revocations due to a Moving Violation or Accident, and No DUI /DWI Infractions (within last 36 months)"
-                              ],
-            "responsibilities": ["Drive and operate trucks",
-                                 "Follow instructions, locate and read location road maps",
-                                 "Pre-inspect truck",
-                                 "Pick up goods and materials, verify loads for accuracy, and deliver them as instructed",
-                                 "Load and unload cargo",
-                                 "Responsible for basic vehicle maintenance; comply with all safe work practices, policies, and processes at all times"
-                                 ]
-            
-
-        },
-        {
-            "title": "Maintenance Technician",
-            "location": "West Palm Beach, FL, US",
-            "hours": "Full-Time",
-            "description": "We are seeking a skilled Maintenance Technician to join our team. As a Maintenance Technician, you will play a crucial role in maintaining and repairing vehicles and equipment.",
-            "qualifications": ["CDL", "2-5 years of driving experience"],
-            "responsibilities": ["Works under limited supervision and selects from written instructions and established procedures to accomplish assigned tasks",
-                                 "Performs repairs and assigned preventive maintenance services",
-                                 "Performs inspection, diagnosis and repair of electrical, hydraulic, suspension, brake and air systems on vehicles and equipment",
-                                 "Utilizes vehicle computer electronics systems to interpret failure modes to initiate or assign repairs",
-                                 "Estimates time and material costs on vehicle repairs and requisitions new parts",
-                                 "Performs all work within Standard Repair Times (SRTs)",
-                                 "Performs service calls for emergency breakdowns",
-                                 "Conducts safety checks on vehicles",
-                                 "Completes required paperwork utilizing fleet maintenance software program associated with repairing vehicles, documenting parts usage, and accounting for repair times",
-                                 "Assists senior technicians in the completion of project work",
-                                 "Reviews, completes or assigns repairs identified on Driver Vehicle Inspection Reports",
-                                 "Maintains a clean, safe work area in compliance with Corporate / OSHA Standards, and performs all work in accordance with established safety procedures"]
-            
-        
-        }
-    ]
+  "jobs": [
+    {
+      "id": "GCF-JOB-001",
+      "title": "Front-End Driver",
+      "shortTitle": "Front-End Driver",
+      "department": "Operations",
+      "reportsTo": "Route Supervisor / Operations Manager",
+      "employmentType": "Full-Time",
+      "location": "West Palm Beach, Florida",
+      "image": "front-end-asl-driver.webp",
+      "description": "The CDL Driver – Class A or B is responsible for safely operating company vehicles while performing assigned residential waste, commercial waste, or recycling collection routes. This position provides essential services by collecting, transporting, and disposing of waste or recyclable materials while maintaining a strong focus on safety, route efficiency, customer service, and compliance with company and regulatory requirements.",
+      "responsibilities": [
+        "Operate assigned CDL vehicle on residential, commercial, and/or recycling collection routes.",
+        "Safely transport materials to designated disposal, transfer, or recycling facilities.",
+        "Perform required pre-trip and post-trip vehicle inspections in accordance with DOT regulations and company procedures.",
+        "Operate vehicles safely in various environments, including residential neighborhoods, commercial properties, narrow streets, and other route conditions.",
+        "Ensure assigned customers are serviced properly and that containers and customer property are left in acceptable condition.",
+        "Follow assigned routes, schedules, and daily operational procedures.",
+        "Communicate route issues, safety concerns, vehicle concerns, delays, or service issues to Dispatch, Route Supervisor, or Operations Manager.",
+        "Immediately report accidents, injuries, property damage, or unsafe conditions and complete required documentation.",
+        "Maintain compliance with DOT regulations, OSHA requirements, and all company safety policies.",
+        "Participate in required safety training, meetings, and operational updates.",
+        "Maintain cleanliness and care of assigned equipment.",
+        "Assist team members as needed to support safe and timely completion of routes.",
+        "Perform other duties as assigned based on operational needs."
+      ],
+      "qualifications": [
+        "Minimum 21 years of age.",
+        "Valid Class A or Class B Commercial Driver’s License (CDL) with required endorsements.",
+        "Minimum two (2) years of commercial driving experience preferred/required.",
+        "Must maintain a safe driving record and meet company insurance requirements.",
+        "Must be legally authorized to work in the United States.",
+        "Ability to understand and communicate safety instructions, route information, and operational requirements.",
+        "Ability to complete required DOT documentation.",
+        "Ability to lift, push, pull, and move materials weighing up to 75 pounds as needed.",
+        "Ability to work outdoors in varying weather conditions.",
+        "Ability to maintain professionalism when interacting with customers, coworkers, and the public."
+      ],
+      "workingConditions": [
+        "Primary work environment includes operating a vehicle and working outdoors.",
+        "Regular exposure to noise, dust, dirt, odors, traffic, and varying weather conditions.",
+        "Position requires frequent sitting, driving, walking, climbing, bending, reaching, and physical activity.",
+        "May require early morning starts, overtime, weekends, or schedule changes based on operational needs."
+      ],
+      "compensationBenefits": [
+        "Day Rate Pay + Performance Incentive Pay (when eligible)",
+        "Medical, Dental, and Vision Insurance",
+        "401(k) Retirement Plan with Company Match",
+        "Paid Vacation, Sick Leave, and Holidays",
+        "Company-Paid Life & AD&D Insurance",
+        "Company-Provided PPE",
+        "Training and Career Advancement Opportunities"
+      ]
+    },
+    {
+      "id": "GCF-JOB-002",
+      "title": "ASL Driver",
+      "shortTitle": "ASL Driver",
+      "department": "Operations",
+      "reportsTo": "Route Supervisor / Operations Manager",
+      "employmentType": "Full-Time",
+      "location": "West Palm Beach, Florida",
+      "image": "front-end-asl-driver.webp",
+      "description": "The CDL Driver – Class A or B is responsible for safely operating company vehicles while performing assigned residential waste, commercial waste, or recycling collection routes. This position provides essential services by collecting, transporting, and disposing of waste or recyclable materials while maintaining a strong focus on safety, route efficiency, customer service, and compliance with company and regulatory requirements.",
+      "responsibilities": [
+        "Operate assigned CDL vehicle on residential, commercial, and/or recycling collection routes.",
+        "Safely transport materials to designated disposal, transfer, or recycling facilities.",
+        "Perform required pre-trip and post-trip vehicle inspections in accordance with DOT regulations and company procedures.",
+        "Operate vehicles safely in various environments, including residential neighborhoods, commercial properties, narrow streets, and other route conditions.",
+        "Ensure assigned customers are serviced properly and that containers and customer property are left in acceptable condition.",
+        "Follow assigned routes, schedules, and daily operational procedures.",
+        "Communicate route issues, safety concerns, vehicle concerns, delays, or service issues to Dispatch, Route Supervisor, or Operations Manager.",
+        "Immediately report accidents, injuries, property damage, or unsafe conditions and complete required documentation.",
+        "Maintain compliance with DOT regulations, OSHA requirements, and all company safety policies.",
+        "Participate in required safety training, meetings, and operational updates.",
+        "Maintain cleanliness and care of assigned equipment.",
+        "Assist team members as needed to support safe and timely completion of routes.",
+        "Perform other duties as assigned based on operational needs."
+      ],
+      "qualifications": [
+        "Minimum 21 years of age.",
+        "Valid Class A or Class B Commercial Driver’s License (CDL) with required endorsements.",
+        "Minimum two (2) years of commercial driving experience preferred/required.",
+        "Must maintain a safe driving record and meet company insurance requirements.",
+        "Must be legally authorized to work in the United States.",
+        "Ability to understand and communicate safety instructions, route information, and operational requirements.",
+        "Ability to complete required DOT documentation.",
+        "Ability to lift, push, pull, and move materials weighing up to 75 pounds as needed.",
+        "Ability to work outdoors in varying weather conditions.",
+        "Ability to maintain professionalism when interacting with customers, coworkers, and the public."
+      ],
+      "workingConditions": [
+        "Primary work environment includes operating a vehicle and working outdoors.",
+        "Regular exposure to noise, dust, dirt, odors, traffic, and varying weather conditions.",
+        "Position requires frequent sitting, driving, walking, climbing, bending, reaching, and physical activity.",
+        "May require early morning starts, overtime, weekends, or schedule changes based on operational needs."
+      ],
+      "compensationBenefits": [
+        "Day Rate Pay + Performance Incentive Pay (when eligible)",
+        "Medical, Dental, and Vision Insurance",
+        "401(k) Retirement Plan with Company Match",
+        "Paid Vacation, Sick Leave, and Holidays",
+        "Company-Paid Life & AD&D Insurance",
+        "Company-Provided PPE",
+        "Training and Career Advancement Opportunities"
+      ]
+    },
+    {
+      "id": "GCF-JOB-003",
+      "title": "Rear Loader Driver",
+      "shortTitle": "Rear Loader Driver",
+      "department": "Operations",
+      "reportsTo": "Route Supervisor / Operations Manager",
+      "employmentType": "Full-Time",
+      "location": "West Palm Beach, Florida",
+      "image": "rear-loader-driver.webp",
+      "description": "The CDL Driver – Class A or B is responsible for safely operating company vehicles while performing assigned residential waste, commercial waste, or recycling collection routes. This position provides essential services by collecting, transporting, and disposing of waste or recyclable materials while maintaining a strong focus on safety, route efficiency, customer service, and compliance with company and regulatory requirements.",
+      "responsibilities": [
+        "Operate assigned CDL vehicle on residential, commercial, and/or recycling collection routes.",
+        "Safely transport materials to designated disposal, transfer, or recycling facilities.",
+        "Perform required pre-trip and post-trip vehicle inspections in accordance with DOT regulations and company procedures.",
+        "Operate vehicles safely in various environments, including residential neighborhoods, commercial properties, narrow streets, and other route conditions.",
+        "Ensure assigned customers are serviced properly and that containers and customer property are left in acceptable condition.",
+        "Follow assigned routes, schedules, and daily operational procedures.",
+        "Communicate route issues, safety concerns, vehicle concerns, delays, or service issues to Dispatch, Route Supervisor, or Operations Manager.",
+        "Immediately report accidents, injuries, property damage, or unsafe conditions and complete required documentation.",
+        "Maintain compliance with DOT regulations, OSHA requirements, and all company safety policies.",
+        "Participate in required safety training, meetings, and operational updates.",
+        "Maintain cleanliness and care of assigned equipment.",
+        "Assist team members as needed to support safe and timely completion of routes.",
+        "Perform other duties as assigned based on operational needs."
+      ],
+      "qualifications": [
+        "Minimum 21 years of age.",
+        "Valid Class A or Class B Commercial Driver’s License (CDL) with required endorsements.",
+        "Minimum two (2) years of commercial driving experience preferred/required.",
+        "Must maintain a safe driving record and meet company insurance requirements.",
+        "Must be legally authorized to work in the United States.",
+        "Ability to understand and communicate safety instructions, route information, and operational requirements.",
+        "Ability to complete required DOT documentation.",
+        "Ability to lift, push, pull, and move materials weighing up to 75 pounds as needed.",
+        "Ability to work outdoors in varying weather conditions.",
+        "Ability to maintain professionalism when interacting with customers, coworkers, and the public."
+      ],
+      "workingConditions": [
+        "Primary work environment includes operating a vehicle and working outdoors.",
+        "Regular exposure to noise, dust, dirt, odors, traffic, and varying weather conditions.",
+        "Position requires frequent sitting, driving, walking, climbing, bending, reaching, and physical activity.",
+        "May require early morning starts, overtime, weekends, or schedule changes based on operational needs."
+      ],
+      "compensationBenefits": [
+        "Day Rate Pay + Performance Incentive Pay (when eligible)",
+        "Medical, Dental, and Vision Insurance",
+        "401(k) Retirement Plan with Company Match",
+        "Paid Vacation, Sick Leave, and Holidays",
+        "Company-Paid Life & AD&D Insurance",
+        "Company-Provided PPE",
+        "Training and Career Advancement Opportunities"
+      ]
+    },
+    {
+      "id": "GCF-JOB-004",
+      "title": "Roll-Off Driver",
+      "shortTitle": "Roll-Off Driver",
+      "department": "Operations",
+      "reportsTo": "Route Supervisor / Operations Manager",
+      "employmentType": "Full-Time",
+      "location": "West Palm Beach, Florida",
+      "image": "rolloff-driver.webp",
+      "description": "The CDL Driver – Class A or B is responsible for safely operating company vehicles while performing assigned residential waste, commercial waste, or recycling collection routes. This position provides essential services by collecting, transporting, and disposing of waste or recyclable materials while maintaining a strong focus on safety, route efficiency, customer service, and compliance with company and regulatory requirements.",
+      "responsibilities": [
+        "Operate assigned CDL vehicle on residential, commercial, and/or recycling collection routes.",
+        "Safely transport materials to designated disposal, transfer, or recycling facilities.",
+        "Perform required pre-trip and post-trip vehicle inspections in accordance with DOT regulations and company procedures.",
+        "Operate vehicles safely in various environments, including residential neighborhoods, commercial properties, narrow streets, and other route conditions.",
+        "Ensure assigned customers are serviced properly and that containers and customer property are left in acceptable condition.",
+        "Follow assigned routes, schedules, and daily operational procedures.",
+        "Communicate route issues, safety concerns, vehicle concerns, delays, or service issues to Dispatch, Route Supervisor, or Operations Manager.",
+        "Immediately report accidents, injuries, property damage, or unsafe conditions and complete required documentation.",
+        "Maintain compliance with DOT regulations, OSHA requirements, and all company safety policies.",
+        "Participate in required safety training, meetings, and operational updates.",
+        "Maintain cleanliness and care of assigned equipment.",
+        "Assist team members as needed to support safe and timely completion of routes.",
+        "Perform other duties as assigned based on operational needs."
+      ],
+      "qualifications": [
+        "Minimum 21 years of age.",
+        "Valid Class A or Class B Commercial Driver’s License (CDL) with required endorsements.",
+        "Minimum two (2) years of commercial driving experience preferred/required.",
+        "Must maintain a safe driving record and meet company insurance requirements.",
+        "Must be legally authorized to work in the United States.",
+        "Ability to understand and communicate safety instructions, route information, and operational requirements.",
+        "Ability to complete required DOT documentation.",
+        "Ability to lift, push, pull, and move materials weighing up to 75 pounds as needed.",
+        "Ability to work outdoors in varying weather conditions.",
+        "Ability to maintain professionalism when interacting with customers, coworkers, and the public."
+      ],
+      "workingConditions": [
+        "Primary work environment includes operating a vehicle and working outdoors.",
+        "Regular exposure to noise, dust, dirt, odors, traffic, and varying weather conditions.",
+        "Position requires frequent sitting, driving, walking, climbing, bending, reaching, and physical activity.",
+        "May require early morning starts, overtime, weekends, or schedule changes based on operational needs."
+      ],
+      "compensationBenefits": [
+        "Day Rate Pay + Performance Incentive Pay (when eligible)",
+        "Medical, Dental, and Vision Insurance",
+        "401(k) Retirement Plan with Company Match",
+        "Paid Vacation, Sick Leave, and Holidays",
+        "Company-Paid Life & AD&D Insurance",
+        "Company-Provided PPE",
+        "Training and Career Advancement Opportunities"
+      ]
+    },
+    {
+      "id": "GCF-JOB-005",
+      "title": "Laborer Technician (Helper)",
+      "shortTitle": "Helper / Collector",
+      "department": "Operations",
+      "reportsTo": "Route Supervisor / Operations Manager",
+      "employmentType": "Part-Time",
+      "location": "West Palm Beach, Florida",
+      "image": "helper.webp",
+      "description": "The Laborer Technician (Helper) supports residential waste, commercial waste, and recycling collection operations by assisting the assigned driver on designated routes. This position plays an important role in ensuring services are completed safely, efficiently, and according to company standards. The role requires physical activity, attention to safety, teamwork, and consistent awareness of surroundings and route conditions.",
+      "responsibilities": [
+        "Assist the CDL Driver with assigned residential, commercial, and recycling collection routes.",
+        "Ride on the collection vehicle in designated safe areas and assist with waste and recycling collection activities.",
+        "Manually lift, carry, and empty waste and recycling containers into the collection vehicle.",
+        "Return containers neatly to their original location after service.",
+        "Retrieve containers from designated areas, including behind fences or driveways, when required.",
+        "Assist with the operation of hydraulic lifts or mechanical equipment as needed.",
+        "Communicate safety concerns, service issues, blocked access, or unsafe conditions to the driver, Route Supervisor, or Operations Manager.",
+        "Assist the driver with safe backing procedures by serving as a spotter when required.",
+        "Remove loose debris around serviced containers to maintain customer service standards.",
+        "Follow all company safety policies, procedures, and operational guidelines.",
+        "Attend required safety meetings, training sessions, and route briefings.",
+        "Immediately report injuries, accidents, property damage, or near misses.",
+        "Maintain a professional attitude when interacting with customers, coworkers, and the public.",
+        "Perform other duties as assigned based on operational needs."
+      ],
+      "qualifications": [
+        "Must be at least 18 years of age.",
+        "High school diploma or GED preferred but not required.",
+        "Previous labor-intensive, outdoor, construction, sanitation, or similar experience preferred.",
+        "Must be legally authorized to work in the United States.",
+        "Ability to understand and communicate safety instructions, route information, and work expectations.",
+        "Ability to work scheduled shifts based on operational needs.",
+        "Strong attendance, reliability, and teamwork skills required.",
+        "Ability to repeatedly lift, push, pull, and move materials weighing up to 75 pounds.",
+        "Ability to work outdoors in varying weather conditions, including heat, cold, and rain."
+      ],
+      "workingConditions": [
+        "Physically demanding outdoor work performed in residential and commercial environments.",
+        "Regular exposure to waste materials, odors, noise, traffic, and changing weather conditions.",
+        "Frequent standing, walking, bending, lifting, climbing, and physical movement.",
+        "Work is performed outdoors and around moving vehicles and equipment.",
+        "Schedule flexibility may be required based on operational needs, route assignments, and customer service requirements."
+      ],
+      "compensationBenefits": [
+        "Competitive day rate plus Performance Incentive Pay (when eligible).",
+        "Benefits available based on eligibility requirements.",
+        "Company-provided PPE at no cost.",
+        "Training and advancement opportunities, including CDL Driver and Lead Helper roles."
+      ]
+    },
+    {
+      "id": "GCF-JOB-006",
+      "title": "Fleet Mechanic",
+      "shortTitle": "Fleet Mechanic",
+      "department": "Fleet Maintenance",
+      "reportsTo": "Director of Maintenance",
+      "employmentType": "Full-Time",
+      "location": "West Palm Beach, Florida",
+      "image": "fleet-mechanic.webp",
+      "description": "The Fleet Mechanic is responsible for performing preventive maintenance, diagnostics, and repairs on a variety of heavy-duty vehicles and equipment used in waste collection operations. This includes front-loaders, rear-loaders, roll-off trucks, and support vehicles. The Fleet Mechanic ensures company equipment is maintained in a safe, reliable, and operational condition to support daily service requirements.",
+      "responsibilities": [
+        "Perform preventive maintenance and scheduled repairs on diesel and gasoline-powered fleet vehicles and equipment.",
+        "Diagnose and troubleshoot mechanical, electrical, hydraulic, and air brake systems.",
+        "Perform inspections and repairs in accordance with DOT requirements and company safety standards.",
+        "Respond to vehicle breakdowns, emergency repairs, and service calls as needed.",
+        "Maintain accurate maintenance records, repair documentation, and service history for assigned equipment.",
+        "Inspect, repair, replace, and maintain vehicle components including engines, transmissions, brakes, axles, tires, suspension systems, and hydraulic components.",
+        "Use diagnostic equipment and computer-based systems to identify and resolve mechanical issues.",
+        "Ensure repairs are completed safely and meet manufacturer specifications and company standards.",
+        "Maintain a clean, safe, and organized maintenance shop and work area.",
+        "Communicate equipment concerns, repair status, and safety issues with the Director of Maintenance.",
+        "Collaborate with drivers, Dispatch, and Operations personnel to identify equipment concerns, minimize downtime, and support route completion.",
+        "Follow all company safety policies, procedures, and PPE requirements.",
+        "Assist with training and guidance of junior technicians or helpers as needed.",
+        "Perform other duties as assigned based on operational needs."
+      ],
+      "qualifications": [
+        "High school diploma or GED required; technical or vocational training preferred.",
+        "Two (2) to three (3) years of experience as a diesel mechanic, heavy equipment technician, or commercial vehicle mechanic preferred.",
+        "Working knowledge of diesel engines, hydraulic systems, electrical systems, and air brake systems.",
+        "Ability to read and interpret technical manuals, repair instructions, and equipment documentation.",
+        "Valid driver's license required; CDL Class A or B preferred.",
+        "Must provide personal hand tools required to perform job duties (specialty tools provided by company, as applicable).",
+        "Knowledge of DOT, OSHA, and applicable safety regulations preferred.",
+        "ASE certification or equivalent certification preferred.",
+        "Strong mechanical aptitude, attention to detail, and problem-solving skills.",
+        "Ability to work independently and as part of a team.",
+        "Bilingual (English/Spanish) preferred but not required."
+      ],
+      "workingConditions": [
+        "Work is performed primarily in a maintenance shop and yard environment.",
+        "Exposure to noise, grease, dirt, waste materials, vehicle exhaust, and changing weather conditions.",
+        "Requires standing, walking, bending, climbing, kneeling, and working under vehicles.",
+        "Ability to lift, push, pull, and move materials up to 75 pounds.",
+        "May require early mornings, evenings, weekends, overtime, or emergency response based on operational needs.",
+        "Occasional roadside assistance or outdoor repair work may be required."
+      ],
+      "compensationBenefits": [
+        "Competitive hourly pay based on experience and qualifications.",
+        "Overtime opportunities available.",
+        "Medical, Dental, and Vision Insurance.",
+        "401(k) Retirement Plan with Company Match.",
+        "Paid Sick Leave, Vacation, and Holidays based on eligibility requirements.",
+        "Company-Paid Life & AD&D Insurance.",
+        "Company-provided PPE and uniform program.",
+        "Tool reimbursement or stipend (if applicable).",
+        "Training and advancement opportunities."
+      ]
+    }
+  ]
 }

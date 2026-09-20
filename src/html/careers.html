@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   {{> header/head title="Join Our Team"}}
+
   <body>
     <!-- Navbar -->
     {{> navbar/navbar configClassList=config.classes.navbar
@@ -9,8 +10,146 @@
 
     <!-- Careers Hero -->
     {{> widgets/careers-hero}}
-    <!-- /Careers Hero-->
+    <!-- /Careers Hero -->
 
+    <!-- Careers Highlights -->
+    <section class="careers-highlights">
+      <div class="container-fluid">
+        <div class="row g-0">
+          <div class="col-6 col-xl-3">
+            <div class="careers-highlight">
+              <i class="bi bi-people-fill careers-highlight-icon"></i>
+
+              <div>
+                <h3>Great People</h3>
+                <p>A supportive team environment</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-xl-3">
+            <div class="careers-highlight">
+              <i class="bi bi-shield-fill-check careers-highlight-icon"></i>
+
+              <div>
+                <h3>Safe Workplace</h3>
+                <p>Your safety comes first</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-xl-3">
+            <div class="careers-highlight">
+              <i
+                class="bi bi-arrow-up-right-circle-fill careers-highlight-icon"
+              ></i>
+
+              <div>
+                <h3>Growth Opportunities</h3>
+                <p>Build a long-term career</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-xl-3">
+            <div class="careers-highlight">
+              <i class="bi bi-leaf-fill careers-highlight-icon"></i>
+
+              <div>
+                <h3>Make a Difference</h3>
+                <p>Cleaner communities for a brighter future</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Careers Highlights -->
+
+    <!-- Careers Hiring -->
+    <section class="careers-hiring mt-xl-5">
+      <div class="container">
+        <div class="row align-items-center g-lg-5">
+          <!-- Hiring Content -->
+          <div class="col-12 col-lg-6">
+            <div class="careers-hiring-content">
+              <div class="careers-hiring-eyebrow mb-3">
+                <span class="subtitle-xs text-secondary"> GCF is Hiring </span>
+              </div>
+
+              <h2 class="careers-hiring-title mb-3">
+                Join a Team<br />
+                That Moves<br />
+                <span class="careers-hiring-nowrap"> Palm Beach County </span
+                ><br />
+                Forward.
+              </h2>
+
+              <p class="careers-hiring-intro mb-4">
+                Goode Companies of Florida (GCF) is growing, and we are looking
+                for dependable team members to join our operations.
+              </p>
+
+              <!-- Hiring Details -->
+              <div class="row gx-3 gy-0">
+                <div class="col-6">
+                  <div class="careers-hiring-detail">
+                    <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+
+                    <div>
+                      <span>West Palm Beach /</span>
+                      <strong>Palm Beach County, FL</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="careers-hiring-detail">
+                    <span
+                      class="material-symbols-outlined careers-hiring-detail-icon"
+                      aria-hidden="true"
+                    >
+                      local_shipping
+                    </span>
+
+                    <div>
+                      <span>Multiple Routes.</span>
+                      <strong>Real Opportunities.</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Hiring Details -->
+            </div>
+          </div>
+          <!-- /Hiring Content -->
+
+          <!-- Hiring Image -->
+          <div class="d-none d-lg-flex col-lg-6 align-items-center">
+            <div class="careers-hiring-image">
+              <picture>
+                <img
+                  class="img-fluid rounded shadow-sm"
+                  src="{{webRoot}}/assets/images/careers/careers-hiring.webp"
+                  loading="lazy"
+                  alt="Goode Companies of Florida waste collection truck"
+                />
+              </picture>
+
+              <div class="careers-hiring-message">
+                Cleaner
+                <span>Stronger</span>
+                Together
+              </div>
+            </div>
+          </div>
+          <!-- /Hiring Image -->
+        </div>
+      </div>
+    </section>
+    <!-- /Careers Hiring -->
+
+    <!-- Careers Video -->
     <div
       class="offcanvas offcanvas-bottom careers-video"
       tabindex="-1"
@@ -22,6 +161,7 @@
           <span class="subtitle-xs">Careers at Goode</span>
           <h2 class="h4 mb-0" id="careersVideoLabel">Join the Goode Team</h2>
         </div>
+
         <button
           type="button"
           class="btn-close"
@@ -48,29 +188,19 @@
         </div>
       </div>
     </div>
+    <!-- /Careers Video -->
 
-    <!-- Main Content -->
-    {{#each careers.jobs}}
-    <div class="border p-3 m-3 jobs">
-      <h2 class="career-title">
-        <a href="javascript:void(0);" onclick="selectJob('{{title}}')"
-          >{{title}}</a
-        >
-      </h2>
-      <div class="d-flex">
-        <div class="location"><i class="bi bi-geo-alt"></i>{{location}}</div>
-        <i class="bi bi-dot mx-2"></i>
-        <div class="hours primary-red">{{hours}}</div>
-      </div>
-    </div>
-    {{/each}}
+    <!-- Open Positions -->
+    {{> widgets/careers-jobs}}
+    <!-- /Open Positions -->
 
     <!-- Footer -->
     {{>footer/footer}}
+    <!-- /Footer -->
 
     <script>
-      function selectJob(jobTitle) {
-        localStorage.setItem("selectedJobTitle", jobTitle);
+      function selectJob(jobId) {
+        localStorage.setItem("selectedJobId", jobId);
         window.location.href = "job-description.html";
       }
     </script>

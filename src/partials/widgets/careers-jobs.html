@@ -1,0 +1,81 @@
+<section class="careers-jobs">
+  <div class="container-fluid careers-jobs-container">
+    <!-- Section Header -->
+    <div
+      class="careers-jobs-header d-flex align-items-end justify-content-between mb-4 mb-lg-5"
+    >
+      <div>
+        <div class="careers-jobs-eyebrow mb-3">
+          <span class="subtitle-xs text-secondary"> Join the Goode Team </span>
+        </div>
+
+        <h2 class="careers-jobs-title mb-0">Open Positions</h2>
+      </div>
+
+      <p class="careers-jobs-count d-none d-md-block mb-1">
+        Opportunities in West Palm Beach
+      </p>
+    </div>
+
+    <!-- Job Cards -->
+    <div class="row g-2 g-md-3">
+      {{#each careers.jobs}}
+      <div class="col-6 col-md-4 col-xl-2">
+        <article class="careers-job-card">
+          <button
+            class="careers-job-card-link"
+            type="button"
+            onclick="selectJob('{{id}}')"
+            aria-label="View {{shortTitle}} position"
+          >
+            <!-- Job Image -->
+            <div class="careers-job-card-image">
+              {{#if image}}
+              <img
+                src="{{../webRoot}}/assets/images/careers/jobs/{{image}}"
+                alt="Open Position: {{shortTitle}}"
+                loading="lazy"
+              />
+              {{else}}
+              <div class="careers-job-card-placeholder" aria-hidden="true">
+                <i class="bi bi-truck"></i>
+              </div>
+              {{/if}}
+            </div>
+
+            <!-- Gradient Overlay -->
+            <div class="careers-job-card-overlay" aria-hidden="true"></div>
+
+            <!-- Card Content -->
+            <div class="careers-job-card-content">
+              <div class="careers-job-card-meta">
+                {{#if department}}
+                <span>{{department}}</span>
+                {{/if}} {{#if employmentType}}
+                <span>{{employmentType}}</span>
+                {{/if}}
+              </div>
+
+              <div class="careers-job-card-title-wrap">
+                <h3 class="careers-job-card-title">{{shortTitle}}</h3>
+              </div>
+
+              <div class="careers-job-card-footer">
+                <span class="careers-job-card-location">
+                  <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+
+                  <span>{{location}}</span>
+                </span>
+
+                <span class="careers-job-card-arrow" aria-hidden="true">
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+              </div>
+            </div>
+          </button>
+        </article>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

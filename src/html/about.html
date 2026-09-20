@@ -1,92 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<!-- Header -->
-{{> header/head title="Who we are"}}
+  <!-- Header -->
+  {{> header/head title="Who we are"}}
 
-<body>
-  <!-- Navbar-->
-  {{> navbar/navbar
-  configClassList=config.classes.navbar
-  classList="border-bottom"}}
-  <!-- /Navbar-->
+  <body>
+    <!-- Navbar-->
+    {{> navbar/navbar configClassList=config.classes.navbar
+    classList="border-bottom"}}
+    <!-- /Navbar-->
 
-  <!-- Main Section-->
-  <main class="{{config.classes.content}}">
-    <!-- Page Title-->
-    <header class="pt-10 text-center col-12 col-sm-9 col-lg-7 col-xl-6 mx-auto">
-      <h1 class="display-3 fw-bold mb-3 text-uppercase"> About us</h1>
-      <p class="text-muted mb-0">Over the past 30 years, we have valued our customers and employees realizing that our
-        success and longevity in the business has been fueled by the loyalty and integrity of the local communities we
-        serve.
-        Moving in to the next 30 years, <span class="fw-bold">we are forever and continuing to provide quality service
-          at a high level of customer value while integrating technologies to improve the solid waste and recycling
-          collection process.</span>
-      </p>
+    <!-- Main Section-->
+    <main class="{{config.classes.content}}">
+      <!-- Page Title-->
+      <header
+        class="pt-10 text-center col-12 col-sm-9 col-lg-7 col-xl-6 mx-auto"
+      >
+        <h1 class="display-3 fw-bold mb-3 text-uppercase">About us</h1>
+        <p class="text-muted mb-0">
+          Over the past 30 years, we have valued our customers and employees
+          realizing that our success and longevity in the business has been
+          fueled by the loyalty and integrity of the local communities we serve.
+          Moving in to the next 30 years,
+          <span class="fw-bold"
+            >we are forever and continuing to provide quality service at a high
+            level of customer value while integrating technologies to improve
+            the solid waste and recycling collection process.</span
+          >
+        </p>
+      </header>
+      <!--/Page Title-->
 
-    </header>
-    <!--/Page Title-->
-
-    <!-- Page Content Goes Here -->
-    <div class="container py-7">
-      <!-- About Us Images-->
-      <div class="row g-3">
-        <!-- Image Column Left -->
-        <div class="col-12 col-md-6 d-none d-md-block h-100">
-          <div class="row g-3">
-            <div class="col-12 col-md-6">
-              <picture>
-                <img class="img-fluid rounded shadow-sm" src="{{webRoot}}/assets/images/about-1.webp" loading="lazy"
-                  alt="{{ config.defaultImgAlt }}">
-              </picture>
-            </div>
-            <div class="col-12 col-md-6">
-              <picture>
-                <img class="img-fluid rounded shadow-sm mb-3" src="{{webRoot}}/assets/images/about-2.webp"
-                  loading="lazy" alt="{{ config.defaultImgAlt }}">
-              </picture>
-              <picture>
-                <img class="img-fluid rounded shadow-sm" src="{{webRoot}}/assets/images/about-3.webp" loading="lazy"
-                  alt="{{ config.defaultImgAlt }}">
-              </picture>
-            </div>
-          </div>
-        </div>
-        <!-- /Image Column Left-->
-
-        <!-- Image Column Right -->
-        <div class="col-12 col-md-6 h-100">
-          <div class="row g-3">
-            <div class="col-12 col-md-6 d-none d-md-block">
-              <picture>
-                <img class="img-fluid rounded shadow-sm" src="{{webRoot}}/assets/images/about-4.webp" loading="lazy"
-                  alt="{{ config.defaultImgAlt }}">
-              </picture>
-            </div>
-            <div class="col-12 col-md-6">
-              <picture>
-                <img class="img-fluid rounded shadow-sm mb-3" src="{{webRoot}}/assets/images/about-5.webp"
-                  loading="lazy" alt="{{ config.defaultImgAlt }}">
-              </picture>
-              <picture>
-                <img class="img-fluid rounded shadow-sm" src="{{webRoot}}/assets/images/about-6.webp" loading="lazy"
-                  alt="{{ config.defaultImgAlt }}">
-              </picture>
+      <!-- Page Content Goes Here -->
+      <div class="container py-7">
+        <!-- About Us Images-->
+        <div class="row g-3">
+          <!-- Image Column Left -->
+          <div class="col-12 col-md-6 d-none d-md-block h-100">
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <picture>
+                  <img
+                    class="img-fluid rounded shadow-sm"
+                    src="{{webRoot}}/assets/images/about-1.webp"
+                    loading="lazy"
+                    alt="{{ config.defaultImgAlt }}"
+                  />
+                </picture>
+              </div>
+              <div class="col-12 col-md-6">
+                <picture>
+                  <img
+                    class="img-fluid rounded shadow-sm mb-3"
+                    src="{{webRoot}}/assets/images/about-2.webp"
+                    loading="lazy"
+                    alt="{{ config.defaultImgAlt }}"
+                  />
+                </picture>
+                <picture>
+                  <img
+                    class="img-fluid rounded shadow-sm"
+                    src="{{webRoot}}/assets/images/about-3.webp"
+                    loading="lazy"
+                    alt="{{ config.defaultImgAlt }}"
+                  />
+                </picture>
+              </div>
             </div>
           </div>
+          <!-- /Image Column Left-->
+
+          <!-- Image Column Right -->
+          <div class="col-12 col-md-6 h-100">
+            <div class="row g-3">
+              <div class="col-12 col-md-6 d-none d-md-block">
+                <picture>
+                  <img
+                    class="img-fluid rounded shadow-sm"
+                    src="{{webRoot}}/assets/images/about-4.webp"
+                    loading="lazy"
+                    alt="{{ config.defaultImgAlt }}"
+                  />
+                </picture>
+              </div>
+              <div class="col-12 col-md-6">
+                <picture>
+                  <img
+                    class="img-fluid rounded shadow-sm mb-3"
+                    src="{{webRoot}}/assets/images/about-5.webp"
+                    loading="lazy"
+                    alt="{{ config.defaultImgAlt }}"
+                  />
+                </picture>
+                <picture>
+                  <img
+                    class="img-fluid rounded shadow-sm"
+                    src="{{webRoot}}/assets/images/about-6.webp"
+                    loading="lazy"
+                    alt="{{ config.defaultImgAlt }}"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <!-- /Image Column Right -->
         </div>
-        <!-- /Image Column Right -->
-      </div>
 
-      <!-- About Us Images-->
+        <!-- About Us Images-->
 
-      <!-- Company Summary 
+        <!-- Company Summary 
       <div class="col-12 col-md-8 col-lg-6 mx-auto text-center py-4 border-bottom mb-5">
         {{> widgets/stats }}
       </div> -->
 
-      <!-- /Company Summary-->
+        <!-- /Company Summary-->
 
-      <!-- Company Story
+        <!-- Company Story
       <div class="py-6 row gx-8 align-items-center">
         <div class="col-12 col-lg-6">
           <p class="mb-3 small fw-bolder tracking-wider text-uppercase text-primary">How it started</p>
@@ -103,63 +131,83 @@
       </div>
        /Company Story-->
 
-      <!-- Company Leadership-->
-      <div class="py-8">
-        <h2 class="display-7 mb-6 text-center">Our team</h2>
-        {{#if (config team)}}
-        <div class="row g-6 justify-content-center">
-          {{#each team.entries}}
-          <!-- Single Team-->
-          <div class="col-12 col-md-6 col-xl-4">
-            <div class="card card-vcard">
-              <picture class="avatar">
-                <img class="img-fluid rounded-circle" src="{{ img }}" loading="lazy" alt="{{ config.defaultImgAlt }}">
-              </picture>
-              <h5 class="card-title vcard-title mt-4">{{ name }}</h5>
-              <h6 class="card-subtitle mb-4 text-primary fs-9">{{ title }}</h6>
-              <p class="text-muted">{{ bio }}</p>
-              <ul class="list-unstyled d-flex">
-                <li class="mx-2"><a href="#"><i class="bi bi-instagram"></i></a></li>
-                <li class="mx-2"><a href="#"><i class="bi bi-facebook"></i></a></li>
-                <li class="mx-2"><a href="#"><i class="bi bi-twitter"></i></a></li>
-              </ul>
+        <!-- Company Leadership-->
+        <div class="py-8">
+          <h2 class="display-7 mb-6 text-center">Our team</h2>
+          {{#if (config team)}}
+          <div class="row g-6 justify-content-center">
+            {{#each team.entries}}
+            <!-- Single Team-->
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="card card-vcard">
+                <picture class="avatar">
+                  <img
+                    class="img-fluid rounded-circle"
+                    src="{{ img }}"
+                    loading="lazy"
+                    alt="{{ config.defaultImgAlt }}"
+                  />
+                </picture>
+                <h5 class="card-title vcard-title mt-4">{{ name }}</h5>
+                <h6 class="card-subtitle mb-4 text-primary fs-9">
+                  {{ title }}
+                </h6>
+                <p class="text-muted">{{ bio }}</p>
+                <ul class="list-unstyled d-flex">
+                  <li class="mx-2">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                  </li>
+                  <li class="mx-2">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                  </li>
+                  <li class="mx-2">
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
+            <!-- / Single Team-->
+            {{/each}}
           </div>
-          <!-- / Single Team-->
-          {{/each}}
+          {{/if}}
         </div>
-        {{/if}}
-      </div>
-      <!-- / Company Leadership-->
+        <!-- / Company Leadership-->
 
-      <!-- Careers-->
-      <div class="d-flex justify-content-center my-5">
-        <div class="rounded-pill border px-5 py 3 text-muted d-flex align-items-center">
-          Want to join our team? <a href="careers.html"
-            class="fw-bold d-flex align-items-center ms-2 text-decoration-none">We are
-            hiring
-            <svg class="mt-1 bi bi-arrow-right-short" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-              fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-            </svg>
-
-          </a>
-
+        <!-- Careers-->
+        <div class="d-flex justify-content-center my-5">
+          <div
+            class="rounded-pill border px-5 py 3 text-muted d-flex align-items-center"
+          >
+            Want to join our team?
+            <a
+              href="careers.html"
+              class="fw-bold d-flex align-items-center ms-2 text-decoration-none"
+              >We are hiring
+              <svg
+                class="mt-1 bi bi-arrow-right-short"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right-short"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
+        <!-- / Careers-->
       </div>
-      <!-- / Careers-->
-    </div>
-    <!-- /Page Content -->
+      <!-- /Page Content -->
+    </main>
+    <!-- /Main Section-->
 
-
-
-  </main>
-  <!-- /Main Section-->
-
-  <!-- Footer -->
-  {{>footer/footer}}
-  <!-- /Footer -->
-</body>
-
+    <!-- Footer -->
+    {{>footer/footer}}
+    <!-- /Footer -->
+  </body>
 </html>

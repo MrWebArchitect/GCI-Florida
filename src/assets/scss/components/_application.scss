@@ -1,0 +1,485 @@
+// ============================================================
+// Quick Application
+// ============================================================
+
+.application-page {
+  background: #f5f6f8;
+}
+
+// ============================================================
+// Hero
+// ============================================================
+
+.application-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0 4.5rem;
+  color: $white;
+  background:
+    radial-gradient(circle at 85% 20%, rgba($white, 0.09), transparent 22rem),
+    linear-gradient(135deg, darken($primary, 9%), $primary);
+
+  &::before {
+    position: absolute;
+    right: -8rem;
+    bottom: -13rem;
+    width: 28rem;
+    height: 28rem;
+    border: 1px solid rgba($white, 0.08);
+    border-radius: 50%;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    right: -2rem;
+    bottom: -8rem;
+    width: 18rem;
+    height: 18rem;
+    border: 1px solid rgba($white, 0.06);
+    border-radius: 50%;
+    content: "";
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.application-back-link {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  color: rgba($white, 0.72);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+
+  i {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    color: $white;
+    transform: translateX(-0.25rem);
+  }
+}
+
+.application-eyebrow {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  &::before {
+    width: 2rem;
+    height: 2px;
+    background: $secondary;
+    content: "";
+  }
+
+  .subtitle-xs {
+    color: rgba($white, 0.7);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+}
+
+.application-title {
+  max-width: 10ch;
+  margin: 0 0 1.25rem;
+  color: $white;
+  font-size: clamp(2.75rem, 11vw, 4.75rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.application-intro {
+  max-width: 38rem;
+  color: rgba($white, 0.76);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.application-hero-mark {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  > i {
+    color: $secondary;
+    font-size: 3rem;
+  }
+
+  span {
+    color: rgba($white, 0.7);
+    font-size: 0.8rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+// ============================================================
+// Form Area
+// ============================================================
+
+.application-content {
+  position: relative;
+  z-index: 2;
+  margin-top: -2rem;
+  padding-bottom: 5rem;
+}
+
+.application-card {
+  overflow: hidden;
+  background: $white;
+  border: 1px solid rgba($black, 0.07);
+  border-radius: 1rem;
+  box-shadow:
+    0 1.25rem 3rem rgba($black, 0.08),
+    0 0.25rem 0.75rem rgba($black, 0.04);
+}
+
+// ============================================================
+// Card Header
+// ============================================================
+
+.application-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem;
+  border-bottom: 1px solid $gray-200;
+
+  h2 {
+    margin: 0.3rem 0 0.5rem;
+    color: $gray-900;
+    font-size: 1.65rem;
+    font-weight: 750;
+  }
+
+  p {
+    max-width: 34rem;
+    margin: 0;
+    color: $gray-600;
+    font-size: 0.9rem;
+    line-height: 1.6;
+
+    strong {
+      color: $primary;
+      font-weight: 700;
+    }
+  }
+
+  .subtitle-xs {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+.application-card-icon {
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  margin-left: 2rem;
+  color: $white;
+  background: $primary;
+  border-radius: 50%;
+  font-size: 1.35rem;
+}
+
+// ============================================================
+// Form
+// ============================================================
+
+.application-card form {
+  padding: 1.75rem;
+}
+
+.application-card {
+  .form-label {
+    margin-bottom: 0.5rem;
+    color: $gray-800;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  .application-required {
+    color: $secondary;
+  }
+
+  .form-control,
+  .form-select {
+    min-height: 3.4rem;
+    padding: 0.8rem 1rem;
+    color: $gray-900;
+    background-color: $white;
+    border: 1px solid $gray-300;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
+
+    &:hover:not(:focus) {
+      border-color: darken($gray-300, 8%);
+    }
+
+    &:focus {
+      background-color: $white;
+      border-color: $primary;
+      box-shadow: 0 0 0 0.2rem rgba($primary, 0.1);
+    }
+
+    &::placeholder {
+      color: $gray-500;
+    }
+  }
+
+  .form-select {
+    cursor: pointer;
+  }
+
+  .invalid-feedback {
+    margin-top: 0.4rem;
+    font-size: 0.78rem;
+  }
+}
+
+// ============================================================
+// Auto-filled Position
+// ============================================================
+
+.application-position-input {
+  position: relative;
+
+  > i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    z-index: 2;
+    color: $secondary;
+    font-size: 0.95rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .form-control {
+    padding-left: 2.75rem;
+  }
+}
+
+.application-card {
+  #job-title-input {
+    color: $primary;
+    background: linear-gradient(
+      90deg,
+      rgba($primary, 0.045),
+      rgba($primary, 0.015)
+    );
+    border-color: rgba($primary, 0.2);
+    font-weight: 700;
+    cursor: default;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+// ============================================================
+// CDL Locked State
+// ============================================================
+
+.application-card {
+  .form-select.is-locked {
+    color: $gray-600;
+    background-color: $gray-100;
+    border-color: $gray-200;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+// ============================================================
+// Submit Area
+// ============================================================
+
+.application-submit {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid $gray-200;
+}
+
+.application-submit-copy {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  color: $gray-600;
+  font-size: 0.8rem;
+  line-height: 1.5;
+
+  i {
+    flex: 0 0 auto;
+    color: $primary;
+    font-size: 1.15rem;
+  }
+}
+
+.application-submit-button {
+  display: inline-flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0.85rem 1.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 750;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  i {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.6rem 1.25rem rgba($secondary, 0.2);
+
+    i {
+      transform: translateX(0.2rem);
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// ============================================================
+// Missing Position State
+// ============================================================
+
+.application-missing-job {
+  padding: 3rem 1rem;
+
+  > i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1.25rem;
+    color: $primary;
+    background: rgba($primary, 0.08);
+    border-radius: 50%;
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    color: $gray-900;
+    font-size: 1.5rem;
+  }
+
+  p {
+    max-width: 28rem;
+    margin: 0 auto 1.5rem;
+    color: $gray-600;
+  }
+}
+
+// ============================================================
+// Tablet
+// ============================================================
+
+@include media-breakpoint-up(md) {
+  .application-hero {
+    padding: 4rem 0 6rem;
+  }
+
+  .application-content {
+    margin-top: -3rem;
+  }
+
+  .application-card-header {
+    padding: 2.25rem 2.5rem;
+  }
+
+  .application-card form {
+    padding: 2.5rem;
+  }
+
+  .application-submit {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .application-submit-copy {
+    max-width: 24rem;
+  }
+
+  .application-submit-button {
+    width: auto;
+    min-width: 13rem;
+  }
+}
+
+// ============================================================
+// Desktop
+// ============================================================
+
+@include media-breakpoint-up(lg) {
+  .application-hero {
+    padding-top: 4.5rem;
+    padding-bottom: 7rem;
+  }
+
+  .application-content {
+    margin-top: -4rem;
+  }
+
+  .application-title {
+    font-size: 4.75rem;
+  }
+
+  .application-card-header {
+    padding: 2.5rem 3rem;
+  }
+
+  .application-card form {
+    padding: 3rem;
+  }
+}
+
+// ============================================================
+// Large Desktop
+// ============================================================
+
+@include media-breakpoint-up(xl) {
+  .application-card {
+    border-radius: 1.25rem;
+  }
+}

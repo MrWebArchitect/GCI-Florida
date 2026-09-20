@@ -1,5 +1,492 @@
+// ==================================================
+// Careers
+// ==================================================
+
 .career-title {
   font-family: "Overpass", sans-serif;
+}
+
+// ==================================================
+// Careers Highlights
+// Mobile / Tablet - 2 x 2 Layout
+// ==================================================
+
+.careers-highlights {
+  position: relative;
+
+  background-color: $gray-100;
+
+  // Vertical center divider
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: 1;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 1px;
+
+    background-color: $gray-300;
+
+    transform: translateX(-50%);
+  }
+
+  // Horizontal center divider
+  &::after {
+    content: "";
+
+    position: absolute;
+    z-index: 1;
+
+    top: 50%;
+    right: 0;
+    left: 0;
+
+    height: 1px;
+
+    background-color: $gray-300;
+
+    transform: translateY(-50%);
+  }
+
+  .col-6 {
+    position: relative;
+  }
+}
+
+.careers-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $spacer;
+
+  width: 100%;
+  max-width: 22rem;
+  height: 100%;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  padding: $spacer * 1.5 $spacer;
+
+  .careers-highlight-icon {
+    flex: 0 0 2.5rem;
+
+    width: 2.5rem;
+
+    color: $primary;
+
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+  }
+
+  h3 {
+    margin-bottom: 0.15rem;
+
+    color: $gray-900;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  p {
+    margin-bottom: 0;
+
+    color: $gray-600;
+
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+}
+
+// ==================================================
+// Careers Highlights
+// Desktop - 1200px+
+// ==================================================
+
+@include media-breakpoint-up(xl) {
+  .careers-highlights {
+    // Remove mobile / tablet cross
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    // Short vertical separators between items
+    .col-6:not(:last-child)::after {
+      content: "";
+
+      position: absolute;
+
+      top: 50%;
+      right: 0;
+
+      width: 1px;
+      height: 50%;
+
+      background-color: $gray-400;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  .careers-highlight {
+    justify-content: center;
+
+    max-width: none;
+
+    gap: $spacer * 0.75;
+
+    padding: $spacer * 1.5 $spacer * 0.75;
+
+    .careers-highlight-icon {
+      flex-basis: 2.25rem;
+
+      width: 2.25rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+
+      white-space: nowrap;
+    }
+
+    p {
+      font-size: 0.82rem;
+
+      white-space: nowrap;
+    }
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .careers-highlight {
+    gap: $spacer;
+
+    padding-right: $spacer;
+    padding-left: $spacer;
+
+    .careers-highlight-icon {
+      flex-basis: 2.5rem;
+
+      width: 2.5rem;
+
+      font-size: 2.15rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// ==================================================
+// Careers Hiring
+// Mobile First
+// ==================================================
+
+.careers-hiring {
+  overflow: hidden;
+
+  background-color: $white;
+
+  h2 {
+    max-width: 34rem;
+
+    margin-bottom: $spacer;
+
+    color: $gray-900;
+
+    font-family: "Overpass", sans-serif;
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+  }
+}
+
+.careers-hiring-content {
+  padding: $spacer * 1.5 0;
+}
+
+.careers-hiring-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: $spacer * 0.75;
+
+  margin-bottom: $spacer;
+
+  &::after {
+    content: "";
+
+    width: 2rem;
+    height: 2px;
+
+    background-color: $secondary;
+  }
+}
+
+.careers-hiring-intro {
+  max-width: 34rem;
+
+  margin-bottom: $spacer * 2;
+
+  color: $text-muted;
+
+  line-height: 1.6;
+}
+
+// ==================================================
+// Careers Hiring Details
+// ==================================================
+
+.careers-hiring-detail {
+  display: flex;
+  align-items: center;
+  gap: $spacer * 0.75;
+
+  // Shared sizing and alignment for both icon systems
+  > i,
+  > .careers-hiring-detail-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 2.5rem;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    font-size: 1.75rem;
+    line-height: 1;
+    text-align: center;
+  }
+
+  // Bootstrap location icon
+  > i {
+    color: $secondary;
+  }
+
+  // Material Symbols truck icon
+  > .careers-hiring-detail-icon {
+    color: $primary;
+
+    font-variation-settings:
+      "FILL" 1,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 24;
+  }
+
+  // Detail copy
+  > div {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 0.85rem;
+    line-height: 1.3;
+
+    > span {
+      color: $text-muted;
+    }
+
+    > strong {
+      color: $gray-900;
+
+      font-weight: 700;
+    }
+  }
+}
+
+// ==================================================
+// Careers Hiring Image
+// ==================================================
+
+.careers-hiring-image {
+  position: relative;
+
+  width: 100%;
+
+  picture {
+    display: block;
+  }
+
+  img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+  }
+}
+
+.careers-hiring-message {
+  position: absolute;
+
+  // Small desktop / lg
+  top: $spacer;
+  right: $spacer * 2;
+
+  color: $primary;
+
+  font-family: "Ephesis", cursive;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 0.72;
+  text-align: center;
+
+  transform: rotate(-6deg);
+
+  span {
+    display: block;
+  }
+
+  // First marker stroke
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    bottom: -0.6rem;
+    left: 50%;
+
+    width: 105%;
+    height: 3px;
+
+    background-color: $secondary;
+    border-radius: 50%;
+
+    transform: translateX(-50%) rotate(-4deg);
+  }
+
+  // Second marker stroke
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -0.8rem;
+    left: 50%;
+
+    width: 78%;
+    height: 2px;
+
+    background-color: $secondary;
+    border-radius: 50%;
+
+    transform: translateX(-43%) rotate(-7deg);
+  }
+
+  @include media-breakpoint-up(xl) {
+    top: $spacer * 1.25;
+    right: $spacer * 5;
+
+    font-size: 2.5rem;
+    line-height: 0.78;
+
+    &::before {
+      bottom: -0.7rem;
+
+      height: 4px;
+    }
+
+    &::after {
+      bottom: -0.95rem;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    top: $spacer * 1.5;
+    right: $spacer * 10;
+
+    font-size: 3rem;
+    line-height: 0.85;
+  }
+}
+
+// ==================================================
+// Careers Hiring
+// Tablet - 768px+
+// ==================================================
+
+@include media-breakpoint-up(md) {
+  .careers-hiring-content {
+    padding: $spacer * 2 0;
+  }
+}
+
+// ==================================================
+// Careers Hiring
+// Small Desktop - 992px+
+// ==================================================
+
+@include media-breakpoint-up(lg) {
+  .careers-hiring {
+    .container {
+      max-width: none;
+
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 2.75rem;
+    }
+  }
+
+  .careers-hiring-content {
+    max-width: 42rem;
+
+    margin-left: auto;
+
+    padding: $spacer * 1.5 $spacer * 2;
+  }
+
+  // Keep Palm Beach County together once the
+  // two-column desktop layout begins.
+  .careers-hiring-nowrap {
+    white-space: nowrap;
+  }
+
+  .careers-hiring-image {
+    // Image has a native 16:9 aspect ratio.
+    // Do not force a height or min-height.
+    width: 100%;
+  }
+}
+
+// ==================================================
+// Careers Hiring
+// Desktop - 1200px+
+// ==================================================
+
+@include media-breakpoint-up(xl) {
+  .careers-hiring {
+    h2 {
+      font-size: 3.25rem;
+    }
+  }
+}
+
+// ==================================================
+// Careers Hiring
+// Large Desktop - 1400px+
+// ==================================================
+
+@include media-breakpoint-up(xxl) {
+  .careers-hiring {
+    h2 {
+      font-size: 3.5rem;
+    }
+  }
 }
 
 // ==================================================
@@ -41,6 +528,7 @@
 
     .subtitle-xs {
       display: block;
+
       margin-bottom: 0.25rem;
 
       color: $primary;
@@ -66,12 +554,14 @@
   iframe {
     width: 100%;
     height: 100%;
+
     border: 0;
   }
 }
 
 // ==================================================
-// Tablet
+// Careers Video
+// Tablet - 768px+
 // ==================================================
 
 @include media-breakpoint-up(md) {
@@ -84,8 +574,8 @@
 }
 
 // ==================================================
-// Desktop
-// Right Side Panel
+// Careers Video
+// Desktop - Right Side Panel - 992px+
 // ==================================================
 
 @include media-breakpoint-up(lg) {
@@ -122,6 +612,7 @@
 
     .offcanvas-body {
       padding: $spacer * 2;
+
       overflow-y: auto;
     }
 
@@ -133,5 +624,888 @@
       width: 100%;
       height: 100%;
     }
+  }
+}
+
+// ==================================================
+// Open Positions
+// ==================================================
+
+.careers-jobs {
+  padding: $spacer * 3 0;
+  overflow: hidden;
+  background-color: $white;
+}
+
+// --------------------------------------------------
+// Section Header
+// --------------------------------------------------
+
+.careers-jobs-header {
+  gap: $spacer;
+}
+
+.careers-jobs-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: $spacer * 0.75;
+
+  &::after {
+    content: "";
+    width: 2rem;
+    height: 2px;
+    background-color: $secondary;
+  }
+}
+
+.careers-jobs-title {
+  color: $gray-900;
+  font-family: "Overpass", sans-serif;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.careers-jobs-count {
+  color: $text-muted;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+// --------------------------------------------------
+// Job Card
+// --------------------------------------------------
+
+.careers-job-card {
+  position: relative;
+  height: 100%;
+  min-height: 17rem;
+  overflow: hidden;
+  border-radius: $border-radius-lg;
+  background-color: $primary;
+  box-shadow: $box-shadow-sm;
+
+  &:hover {
+    .careers-job-card-image img {
+      transform: scale(1.04);
+    }
+
+    .careers-job-card-overlay {
+      transform: translateY(-0.35rem) scaleY(1.04);
+    }
+
+    .careers-job-card-content {
+      transform: translateY(-0.3rem);
+    }
+
+    .careers-job-card-arrow {
+      transform: translateX(0.25rem);
+    }
+  }
+}
+
+.careers-job-card-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 3px solid rgba($secondary, 0.85);
+    outline-offset: -3px;
+  }
+}
+
+// --------------------------------------------------
+// Card Image
+// --------------------------------------------------
+
+.careers-job-card-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+}
+
+// Temporary fallback until each job has an image
+.careers-job-card-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    145deg,
+    lighten($primary, 7%),
+    darken($primary, 8%)
+  );
+
+  i {
+    color: rgba($white, 0.12);
+    font-size: 5rem;
+  }
+}
+
+// --------------------------------------------------
+// Gradient Overlay
+// --------------------------------------------------
+
+.careers-job-card-overlay {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba($gray-900, 0) 20%,
+    rgba($gray-900, 0.08) 38%,
+    rgba($primary, 0.55) 66%,
+    rgba($primary, 0.98) 100%
+  );
+  transform-origin: bottom center;
+  transition: transform 0.35s ease;
+}
+
+// --------------------------------------------------
+// Card Content
+// --------------------------------------------------
+
+.careers-job-card-content {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: $spacer;
+  color: $white;
+  transition: transform 0.3s ease;
+}
+
+// --------------------------------------------------
+// Meta
+// --------------------------------------------------
+
+.careers-job-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $spacer * 0.35;
+  margin-bottom: $spacer * 0.4;
+  color: rgba($white, 0.82);
+  font-size: 0.62rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  span {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child)::after {
+      content: "";
+      width: 3px;
+      height: 3px;
+      margin-left: $spacer * 0.35;
+      border-radius: 50%;
+      background-color: $secondary;
+    }
+  }
+}
+
+// --------------------------------------------------
+// Card Footer
+// --------------------------------------------------
+
+.careers-job-card-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: $spacer * 0.5;
+}
+
+.careers-job-card-info {
+  min-width: 0;
+}
+
+.careers-job-card-title {
+  margin: 0 0 $spacer * 0.35;
+  color: $white;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.careers-job-card-location {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacer * 0.25;
+  color: rgba($white, 0.78);
+  font-size: 0.68rem;
+  line-height: 1.25;
+
+  i {
+    flex: 0 0 auto;
+    margin-top: 0.05rem;
+    color: $secondary;
+    font-size: 0.75rem;
+  }
+}
+
+// --------------------------------------------------
+// Arrow
+// --------------------------------------------------
+
+.careers-job-card-arrow {
+  display: flex;
+  flex: 0 0 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba($white, 0.7);
+  border-radius: 50%;
+  color: $white;
+  font-size: 0.85rem;
+  transition: transform 0.25s ease;
+
+  i {
+    line-height: 1;
+  }
+}
+
+// ==================================================
+// Tablet
+// 3 cards across
+// ==================================================
+
+@include media-breakpoint-up(md) {
+  .careers-jobs {
+    padding: $spacer * 4 0;
+  }
+
+  .careers-job-card {
+    min-height: 21rem;
+  }
+
+  .careers-job-card-content {
+    padding: $spacer * 1.25;
+  }
+
+  .careers-job-card-title {
+    font-size: 1.35rem;
+  }
+
+  .careers-job-card-meta {
+    font-size: 0.68rem;
+  }
+
+  .careers-job-card-location {
+    font-size: 0.75rem;
+  }
+
+  .careers-job-card-arrow {
+    flex-basis: 2.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+// ==================================================
+// Desktop
+// 6 cards across
+// ==================================================
+
+@include media-breakpoint-up(xl) {
+  .careers-jobs {
+    padding: $spacer * 5 0;
+  }
+
+  .careers-jobs-title {
+    font-size: 3.25rem;
+  }
+
+  .careers-job-card {
+    min-height: 19rem;
+  }
+
+  .careers-job-card-content {
+    padding: $spacer;
+  }
+
+  .careers-job-card-title {
+    font-size: 1.05rem;
+  }
+
+  .careers-job-card-meta {
+    gap: $spacer * 0.3;
+    font-size: 0.6rem;
+
+    span {
+      &:not(:last-child)::after {
+        margin-left: $spacer * 0.3;
+      }
+    }
+  }
+
+  .careers-job-card-location {
+    font-size: 0.65rem;
+  }
+
+  .careers-job-card-arrow {
+    flex-basis: 2rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+}
+
+// ==================================================
+// Large Desktop
+// ==================================================
+
+@include media-breakpoint-up(xxl) {
+  .careers-jobs-title {
+    font-size: 3.5rem;
+  }
+
+  .careers-job-card {
+    min-height: 21rem;
+  }
+
+  .careers-job-card-content {
+    padding: $spacer * 1.15;
+  }
+
+  .careers-job-card-title {
+    font-size: 1.15rem;
+  }
+
+  .careers-job-card-location {
+    font-size: 0.7rem;
+  }
+
+  .careers-job-card-arrow {
+    flex-basis: 2.15rem;
+    width: 2.15rem;
+    height: 2.15rem;
+  }
+}
+
+// ==================================================
+// Job Detail Page
+// ==================================================
+
+.job-detail-page {
+  min-height: 60vh;
+  background-color: $white;
+}
+
+// ==================================================
+// Job Detail Hero
+// ==================================================
+
+.job-detail-hero {
+  position: relative;
+  padding: $spacer * 2.5 0 $spacer * 3;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    darken($primary, 9%) 0%,
+    $primary 55%,
+    lighten($primary, 7%) 100%
+  );
+  color: $white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10rem;
+    right: -8rem;
+    width: 24rem;
+    height: 24rem;
+    border: 1px solid rgba($white, 0.08);
+    border-radius: 50%;
+  }
+}
+
+.job-detail-back-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacer * 0.4;
+  margin-bottom: $spacer * 2;
+  color: rgba($white, 0.72);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+
+  i {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    color: $white;
+    transform: translateX(-0.2rem);
+  }
+}
+
+.job-detail-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: $spacer * 0.75;
+  margin-bottom: $spacer;
+
+  &::after {
+    content: "";
+    width: 2rem;
+    height: 2px;
+    background-color: $secondary;
+  }
+
+  .subtitle-xs {
+    color: rgba($white, 0.8) !important;
+  }
+}
+
+.job-detail-title {
+  position: relative;
+  z-index: 1;
+  max-width: 48rem;
+  margin: 0 0 $spacer * 1.5;
+  color: $white;
+  font-family: "Overpass", sans-serif;
+  font-size: clamp(2.5rem, 9vw, 5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.job-detail-meta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacer * 0.75 $spacer * 1.5;
+}
+
+.job-detail-meta-item {
+  display: flex;
+  align-items: center;
+  gap: $spacer * 0.4;
+  color: rgba($white, 0.82);
+  font-size: 0.85rem;
+  line-height: 1.3;
+
+  i {
+    color: $secondary;
+  }
+}
+
+.job-detail-hero-apply {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacer * 0.6;
+  min-width: 10rem;
+  padding: $spacer * 0.9 $spacer * 1.5;
+  font-weight: 700;
+
+  i {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    i {
+      transform: translateX(0.25rem);
+    }
+  }
+}
+
+// ==================================================
+// Job Detail Body
+// ==================================================
+
+.job-detail-body {
+  padding: $spacer * 3 0;
+  background-color: $white;
+}
+
+.job-detail-mobile-apply {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacer * 0.5;
+  padding: $spacer;
+  font-weight: 700;
+}
+
+// ==================================================
+// Job Detail Sections
+// ==================================================
+
+.job-detail-section {
+  padding-bottom: $spacer * 3;
+  margin-bottom: $spacer * 3;
+  border-bottom: 1px solid $gray-300;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.job-detail-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacer;
+  margin-bottom: $spacer * 1.5;
+
+  h2 {
+    margin: $spacer * 0.25 0 0;
+    color: $gray-900;
+    font-family: "Overpass", sans-serif;
+    font-size: clamp(1.6rem, 5vw, 2.25rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+}
+
+.job-detail-section-number {
+  display: flex;
+  flex: 0 0 2.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba($primary, 0.08);
+  color: $primary;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.job-detail-description {
+  max-width: 48rem;
+  margin: 0;
+  color: $text-muted;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+// ==================================================
+// Job Detail Lists
+// ==================================================
+
+.job-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacer;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.job-detail-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacer * 0.75;
+  color: $gray-700;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.job-detail-list-icon {
+  display: flex;
+  flex: 0 0 1.65rem;
+  align-items: center;
+  justify-content: center;
+  width: 1.65rem;
+  height: 1.65rem;
+  margin-top: 0.05rem;
+  border-radius: 50%;
+  background-color: rgba($primary, 0.08);
+  color: $primary;
+  font-size: 0.8rem;
+}
+
+.job-detail-benefits {
+  .job-detail-list-icon {
+    background-color: rgba($secondary, 0.08);
+    color: $secondary;
+  }
+}
+
+// ==================================================
+// Job Detail Sidebar
+// ==================================================
+
+.job-detail-sidebar {
+  position: relative;
+}
+
+.job-detail-apply-card {
+  padding: $spacer * 1.5;
+  border: 1px solid $gray-300;
+  border-radius: $border-radius-lg;
+  background-color: $gray-100;
+  box-shadow: $box-shadow-sm;
+
+  h2 {
+    margin: $spacer * 0.5 0 $spacer;
+    color: $gray-900;
+    font-family: "Overpass", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  > p {
+    margin-bottom: $spacer * 1.5;
+    color: $text-muted;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+.job-detail-apply-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: $spacer * 1.25;
+  border-radius: 50%;
+  background-color: $primary;
+  color: $white;
+  font-size: 1.25rem;
+}
+
+.job-detail-apply-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacer * 0.5;
+  padding: $spacer * 0.9;
+  font-weight: 700;
+
+  i {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    i {
+      transform: translateX(0.25rem);
+    }
+  }
+}
+
+.job-detail-apply-meta {
+  display: flex;
+  flex-direction: column;
+  gap: $spacer * 1.1;
+  padding-top: $spacer * 1.5;
+  margin-top: $spacer * 1.5;
+  border-top: 1px solid $gray-300;
+
+  > div {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacer * 0.75;
+
+    > i {
+      flex: 0 0 auto;
+      margin-top: 0.1rem;
+      color: $secondary;
+      font-size: 1rem;
+    }
+
+    > span {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+
+      small {
+        margin-bottom: 0.1rem;
+        color: $text-muted;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      strong {
+        color: $gray-900;
+        font-size: 0.85rem;
+        font-weight: 700;
+        line-height: 1.35;
+      }
+    }
+  }
+}
+
+// ==================================================
+// Bottom CTA
+// ==================================================
+
+.job-detail-cta {
+  padding: $spacer * 3 0;
+  background-color: $primary;
+  color: $white;
+
+  .subtitle-xs {
+    color: rgba($white, 0.7);
+  }
+
+  h2 {
+    margin: $spacer * 0.5 0;
+    color: $white;
+    font-family: "Overpass", sans-serif;
+    font-size: clamp(2rem, 7vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+
+  p {
+    max-width: 40rem;
+    margin: 0;
+    color: rgba($white, 0.75);
+    line-height: 1.6;
+  }
+}
+
+.job-detail-bottom-apply {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacer * 0.5;
+  padding: $spacer * 0.9 $spacer * 1.5;
+  color: $primary;
+  font-weight: 700;
+
+  i {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    i {
+      transform: translateX(0.25rem);
+    }
+  }
+}
+
+// ==================================================
+// Error / Empty State
+// ==================================================
+
+.job-detail-state {
+  display: flex;
+  min-height: 60vh;
+  align-items: center;
+  padding: $spacer * 5 0;
+
+  i {
+    display: block;
+    margin-bottom: $spacer;
+    color: $primary;
+    font-size: 3rem;
+  }
+
+  h1 {
+    margin-bottom: $spacer;
+    color: $gray-900;
+    font-family: "Overpass", sans-serif;
+    font-weight: 800;
+  }
+
+  p {
+    margin-bottom: $spacer * 1.5;
+    color: $text-muted;
+  }
+}
+
+// ==================================================
+// Job Detail Responsive
+// ==================================================
+
+@include media-breakpoint-up(md) {
+  .job-detail-hero {
+    padding: $spacer * 3 0 $spacer * 4;
+  }
+
+  .job-detail-body {
+    padding: $spacer * 4 0;
+  }
+
+  .job-detail-section {
+    padding-bottom: $spacer * 3.5;
+    margin-bottom: $spacer * 3.5;
+  }
+
+  .job-detail-description {
+    font-size: 1.05rem;
+  }
+
+  .job-detail-list-item {
+    font-size: 1rem;
+  }
+
+  .job-detail-apply-card {
+    padding: $spacer * 2;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .job-detail-title {
+    font-size: 4rem;
+  }
+
+  .job-detail-body {
+    padding: $spacer * 5 0;
+  }
+
+  .job-detail-sidebar {
+    position: sticky;
+    top: $spacer * 2;
+  }
+
+  .job-detail-cta {
+    padding: $spacer * 4 0;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .job-detail-title {
+    font-size: 4.5rem;
+  }
+
+  .job-detail-apply-card {
+    padding: $spacer * 2.25;
   }
 }

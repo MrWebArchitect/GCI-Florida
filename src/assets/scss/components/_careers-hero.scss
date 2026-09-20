@@ -26,6 +26,14 @@
   }
 }
 
+.brighter-tomorrow {
+  white-space: normal;
+
+  @include media-breakpoint-up(lg) {
+    white-space: nowrap;
+  }
+}
+
 @include media-breakpoint-down(md) {
   #careers-hero {
     background-position: 65% center;
@@ -41,5 +49,89 @@
 
     background-position: 65% center;
     background-size: cover;
+  }
+}
+
+.careers-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 3rem;
+    height: 3px;
+
+    background-color: $secondary;
+    border-radius: $border-radius-pill;
+  }
+}
+
+// ==================================================
+// Careers Hero Decorative Message
+// ==================================================
+
+.careers-hero-note {
+  position: absolute;
+  z-index: 2;
+
+  top: 16%;
+  right: 5%;
+
+  flex-direction: column;
+  align-items: center;
+
+  color: $primary;
+
+  font-family: "Ephesis", cursive;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 0.9;
+
+  text-align: center;
+
+  // Angles the entire text block
+  transform: rotate(-6deg);
+
+  span {
+    display: block;
+  }
+
+  // First marker stroke
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    width: 105%;
+    height: 4px;
+
+    left: 50%;
+    bottom: -0.75rem;
+
+    background-color: $secondary;
+    border-radius: 50%;
+
+    transform: translateX(-50%) rotate(-4deg);
+  }
+
+  // Second marker stroke
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    width: 78%;
+    height: 2px;
+
+    left: 50%;
+    bottom: -1rem;
+
+    background-color: $secondary;
+    border-radius: 50%;
+
+    transform: translateX(-43%) rotate(-7deg);
   }
 }

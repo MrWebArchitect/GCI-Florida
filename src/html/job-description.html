@@ -1,22 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <!-- Header-->
+  {{> header/head title="Job Details"}}
 
-<!-- Header-->
-{{> header/head title="Job Details"}}
-
-<body>
-    
-<!-- Navbar -->
-  {{> navbar/navbar
-    configClassList=config.classes.navbar
+  <body>
+    <!-- Navbar -->
+    {{> navbar/navbar configClassList=config.classes.navbar
     classList="border-bottom"}}
-<!-- /Navbar -->
-    
+    <!-- /Navbar -->
 
-    <div class="container job-detail-container" id="job-description"></div>
- 
-     {{> footer/footer}}
-     
-</body>
+    <main id="job-description" class="job-detail-page"></main>
 
+    {{> footer/footer}}
+  </body>
 </html>

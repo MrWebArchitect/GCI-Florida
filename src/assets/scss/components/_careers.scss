@@ -6,6 +6,27 @@
   font-family: "Overpass", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+//Scroll behavior when view open posistions link is clicked in the hero image
+#open-positions {
+  scroll-margin-top: 5rem;
+}
+
+@include media-breakpoint-up(md) {
+  #open-positions {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  #open-positions {
+    scroll-margin-top: 6rem;
+  }
+}
+
 // ==================================================
 // Careers Highlights
 // Mobile / Tablet - 2 x 2 Layout
@@ -1507,5 +1528,677 @@
 
   .job-detail-apply-card {
     padding: $spacer * 2.25;
+  }
+}
+
+// ==================================================
+// 60 Second Application
+// Mobile First
+// ==================================================
+
+.careers-60 {
+  padding: $spacer * 3 0;
+  overflow: hidden;
+  background-color: $gray-100;
+}
+
+.careers-60-layout {
+  overflow: hidden;
+  background-color: $white;
+}
+
+.careers-60-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  padding: $spacer * 2;
+
+  h2 {
+    max-width: 34rem;
+
+    margin-bottom: $spacer;
+
+    color: $gray-900;
+
+    font-family: "Overpass", sans-serif;
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+  }
+
+  > p {
+    max-width: 32rem;
+
+    margin-bottom: $spacer * 1.5;
+
+    color: $text-muted;
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+// --------------------------------------------------
+// Eyebrow
+// --------------------------------------------------
+
+.careers-60-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: $spacer * 0.75;
+
+  margin-bottom: $spacer;
+
+  color: $secondary;
+
+  // Match the red line treatment used elsewhere
+  &::after {
+    content: "";
+
+    width: 2rem;
+    height: 2px;
+
+    background-color: $secondary;
+  }
+
+  i {
+    flex: 0 0 auto;
+
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  span {
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}
+
+// --------------------------------------------------
+// Actions
+// --------------------------------------------------
+
+.careers-60-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $spacer * 1.25;
+}
+
+.careers-60-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacer * 0.5;
+
+  padding: $spacer * 0.9 $spacer * 1.5;
+
+  font-weight: 700;
+
+  i {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    i {
+      transform: translateX(0.25rem);
+    }
+  }
+}
+
+.careers-60-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacer * 0.65;
+
+  color: $text-muted;
+
+  font-size: 0.8rem;
+  line-height: 1.35;
+  text-decoration: none;
+
+  > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 2.25rem;
+
+    width: 2.25rem;
+    height: 2.25rem;
+
+    border-radius: 50%;
+
+    background-color: rgba($primary, 0.08);
+
+    color: $primary;
+
+    font-size: 0.9rem;
+  }
+
+  > span {
+    display: flex;
+    flex-direction: column;
+  }
+
+  strong {
+    color: $gray-900;
+    font-weight: 700;
+  }
+
+  &:hover {
+    strong {
+      color: $primary;
+    }
+  }
+}
+
+// ==================================================
+// Here's What We'll Ask
+// ==================================================
+
+.careers-60-questions {
+  position: relative;
+
+  min-height: 30rem;
+
+  overflow: hidden;
+
+  color: $white;
+  background-color: $primary;
+}
+
+.careers-60-questions-bg,
+.careers-60-questions-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.careers-60-questions-bg {
+  background-position: center;
+  background-size: cover;
+
+  transform: scale(1.02);
+}
+
+.careers-60-questions-overlay {
+  background-color: rgba($primary, 0.9);
+}
+
+.careers-60-questions-content {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 30rem;
+
+  padding: $spacer * 2;
+
+  h3 {
+    margin-bottom: $spacer * 1.5;
+
+    color: $white;
+
+    font-family: "Overpass", sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+}
+
+// --------------------------------------------------
+// Question List
+// --------------------------------------------------
+
+.careers-60-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacer * 0.65;
+
+  max-width: 27rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: $spacer * 0.75;
+
+    color: rgba($white, 0.88);
+
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+}
+
+.careers-60-number {
+  display: flex;
+  flex: 0 0 1.65rem;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.65rem;
+  height: 1.65rem;
+
+  border: 1px solid rgba($white, 0.7);
+  border-radius: 50%;
+
+  color: $white;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+// --------------------------------------------------
+// Handwritten Note
+// --------------------------------------------------
+
+.careers-60-note {
+  position: relative;
+
+  align-self: flex-end;
+
+  margin-top: $spacer * 1.25;
+  margin-right: $spacer;
+
+  color: $white;
+
+  font-family: "Ephesis", cursive;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 0.8;
+  text-align: center;
+
+  transform: rotate(-6deg);
+
+  span {
+    display: block;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    bottom: -0.65rem;
+    left: 50%;
+
+    width: 105%;
+    height: 3px;
+
+    background-color: $secondary;
+    border-radius: 50%;
+
+    transform: translateX(-50%) rotate(-4deg);
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -0.85rem;
+    left: 50%;
+
+    width: 78%;
+    height: 2px;
+
+    background-color: $secondary;
+    border-radius: 50%;
+
+    transform: translateX(-43%) rotate(-7deg);
+  }
+}
+
+// ==================================================
+// Why GCF
+// Mobile First
+// ==================================================
+
+.why-gcf {
+  padding: $spacer * 3 0;
+
+  overflow: hidden;
+
+  background-color: $white;
+}
+
+.why-gcf-header {
+  display: flex;
+  align-items: flex-end;
+  gap: $spacer;
+
+  margin-bottom: $spacer * 2;
+
+  > div:first-child {
+    flex: 0 0 auto;
+  }
+
+  .subtitle-xs {
+    display: flex;
+    align-items: center;
+    gap: $spacer * 0.75;
+
+    margin-bottom: $spacer * 0.5;
+
+    &::after {
+      content: "";
+
+      width: 2rem;
+      height: 2px;
+
+      background-color: $secondary;
+    }
+  }
+
+  h2 {
+    margin: 0;
+
+    color: $gray-900;
+
+    font-family: "Overpass", sans-serif;
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+.why-gcf-header-line {
+  display: none;
+}
+
+// --------------------------------------------------
+// Benefits
+// --------------------------------------------------
+
+.why-gcf-grid {
+  position: relative;
+}
+
+.why-gcf-grid > div {
+  position: relative;
+
+  // Mobile 2-column separators
+  &:nth-child(odd):not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    right: 0;
+
+    width: 1px;
+    height: 55%;
+
+    background-color: $gray-300;
+
+    transform: translateY(-50%);
+  }
+}
+
+.why-gcf-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 10rem;
+
+  padding: $spacer * 1.5 $spacer;
+
+  text-align: center;
+
+  h3 {
+    margin: $spacer * 0.75 0 0;
+
+    color: $gray-900;
+
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+}
+
+.why-gcf-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3rem;
+  height: 3rem;
+
+  color: $primary;
+
+  font-size: 2rem;
+  line-height: 1;
+}
+
+// ==================================================
+// Tablet - 768px+
+// ==================================================
+
+@include media-breakpoint-up(md) {
+  .careers-60 {
+    padding: $spacer * 4 0;
+  }
+
+  .careers-60-content,
+  .careers-60-questions-content {
+    padding: $spacer * 3;
+  }
+
+  .careers-60-eyebrow {
+    i {
+      font-size: 3.5rem;
+    }
+  }
+
+  .careers-60-note {
+    margin-top: $spacer * 1.5;
+
+    font-size: 2.5rem;
+  }
+
+  .why-gcf {
+    padding: $spacer * 4 0;
+  }
+
+  .why-gcf-item {
+    min-height: 11rem;
+  }
+}
+
+// ==================================================
+// Desktop - 992px+
+// ==================================================
+
+@include media-breakpoint-up(lg) {
+  .why-gcf {
+    .container {
+      max-width: none;
+      padding: 0;
+    }
+  }
+
+  .why-gcf-header {
+    max-width: 84rem;
+
+    margin-right: auto;
+    margin-bottom: $spacer * 2.5;
+    margin-left: auto;
+
+    padding-right: $spacer * 2;
+    padding-left: $spacer * 2;
+  }
+
+  .why-gcf-grid {
+    width: 100%;
+    margin: 0;
+
+    > div {
+      position: relative;
+
+      // Reset mobile divider behavior
+      &::after {
+        display: none;
+      }
+
+      // Desktop: divider after items 1–4
+      &:not(:last-child)::after {
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        right: 0;
+
+        display: block;
+
+        width: 1px;
+        height: 50%;
+
+        background-color: $gray-300;
+
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .why-gcf-item {
+    min-height: 12rem;
+    padding: $spacer * 2 $spacer;
+  }
+}
+
+// ------------------------------------------------
+// Why GCF - Full Width Desktop
+// ------------------------------------------------
+
+@include media-breakpoint-up(lg) {
+  .why-gcf {
+    .container {
+      max-width: none;
+      padding: 0;
+    }
+  }
+
+  .why-gcf-header {
+    max-width: 84rem;
+
+    margin-right: auto;
+    margin-bottom: $spacer * 2.5;
+    margin-left: auto;
+
+    padding-right: $spacer * 2;
+    padding-left: $spacer * 2;
+  }
+
+  .why-gcf-grid {
+    width: 100%;
+    margin: 0;
+
+    > div {
+      position: relative;
+
+      // Reset mobile divider behavior
+      &::after {
+        display: none;
+      }
+
+      // Desktop: divider after items 1–4
+      &:not(:last-child)::after {
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        right: 0;
+
+        display: block;
+
+        width: 1px;
+        height: 50%;
+
+        background-color: $gray-300;
+
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .why-gcf-item {
+    min-height: 12rem;
+    padding: $spacer * 2 $spacer;
+  }
+}
+
+// ==================================================
+// Desktop - 1200px+
+// ==================================================
+
+@include media-breakpoint-up(xl) {
+  .careers-60 {
+    padding: $spacer * 5 0;
+  }
+
+  .careers-60-content {
+    h2 {
+      font-size: 3.25rem;
+    }
+  }
+
+  .careers-60-eyebrow {
+    i {
+      font-size: 4rem;
+    }
+  }
+
+  .careers-60-note {
+    font-size: 3rem;
+  }
+
+  .why-gcf {
+    padding: $spacer * 5 0;
+  }
+
+  .why-gcf-item {
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}
+
+// ==================================================
+// Large Desktop - 1400px+
+// ==================================================
+
+@include media-breakpoint-up(xxl) {
+  .careers-60-content {
+    h2 {
+      font-size: 3.5rem;
+    }
+  }
+
+  .careers-60-note {
+    font-size: 3.25rem;
+  }
+
+  .why-gcf-header {
+    max-width: 96rem;
+  }
+
+  .why-gcf-item {
+    min-height: 13rem;
   }
 }

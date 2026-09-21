@@ -1,0 +1,16 @@
+{
+    "entries": [
+        {
+            "img": "{{webRoot}}/assets/images/profile-small-will-goode-sr.png",
+            "name": "Willie K. Goode",
+            "title": "Founder & CEO",
+            "bio": "After starting out on the back of a truck, the CEO of Goode Companies, Inc. has grown a multi-company portfolio."
+        },
+        {
+            "img": "{{webRoot}}/assets/images/profile-small-will-goode-jr.png",
+            "name": "Willie D. Goode",
+            "title": "Chief Operating Officer",
+            "bio": "At 27, Willie successfully led GCI's expansion into Baltimore as VP of Roll-off/Commercial Operations, increasing revenues year over year."
+        }
+    ]
+}

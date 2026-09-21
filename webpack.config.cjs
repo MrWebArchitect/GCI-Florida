@@ -86,6 +86,8 @@ const wPackConfig = {
 
     open: true,
 
+    allowedHosts: "all",
+
     hot: true,
 
     compress: true,

@@ -6,10 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  const selectedJobId = localStorage.getItem("selectedJobId");
+  const params = new URLSearchParams(window.location.search);
+  const selectedJobId = params.get("job");
 
   if (!selectedJobId) {
-    console.error("No selected job ID found in localStorage.");
+    console.error("No job ID found in URL.");
     renderJobNotFound();
     return;
   }
@@ -148,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="col-lg-4 d-none d-lg-flex justify-content-lg-end">
 
               <a
-                href="apply.html"
+                href="apply.html?job=${encodeURIComponent(job.id)}"
                 class="btn btn-danger job-detail-hero-apply"
               >
                 Apply Now
@@ -176,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="d-lg-none mb-4">
 
                 <a
-                  href="apply.html"
+                  href="apply.html?job=${encodeURIComponent(job.id)}"
                   class="btn btn-danger w-100 job-detail-mobile-apply"
                 >
                   Apply for ${job.shortTitle || job.title}
@@ -384,7 +385,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   </p>
 
                   <a
-                    href="apply.html"
+                    href="apply.html?job=${encodeURIComponent(job.id)}"
                     class="btn btn-danger w-100 job-detail-apply-button"
                   >
                     Apply Now
@@ -506,7 +507,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="col-lg-4 text-lg-end">
 
               <a
-                href="apply.html"
+                href="apply.html?job=${encodeURIComponent(job.id)}"
                 class="btn btn-light job-detail-bottom-apply"
               >
                 Apply for ${job.shortTitle || job.title}

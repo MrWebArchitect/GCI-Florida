@@ -279,7 +279,8 @@
     pointer-events: none;
   }
 
-  .form-control {
+  .form-control,
+  .form-select {
     padding-left: 2.75rem;
   }
 }

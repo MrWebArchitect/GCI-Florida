@@ -158,18 +158,26 @@
                     <div class="col-12">
                       <label for="job-title-input" class="form-label">
                         Position Interested In
+                        <span class="application-required">*</span>
                       </label>
 
                       <div class="application-position-input">
                         <i class="bi bi-briefcase-fill" aria-hidden="true"></i>
 
-                        <input
-                          type="text"
-                          class="form-control"
+                        <select
+                          class="form-select"
                           id="job-title-input"
                           name="position_interested_in"
-                          readonly
-                        />
+                          required
+                        >
+                          <option value="" selected disabled>
+                            Select a position
+                          </option>
+                        </select>
+
+                        <div class="invalid-feedback">
+                          Please select a position.
+                        </div>
                       </div>
                     </div>
 

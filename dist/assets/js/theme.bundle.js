@@ -38,16 +38,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const jobTitleEl = document.querySelector("#job-title");
   const jobTitleInput = document.querySelector("#job-title-input");
   const jobIdInput = document.querySelector("#job-id-input");
-  const applicationForm = document.querySelector(".application-card form");
+
   const hasCdlSelect = document.querySelector("#has-cdl");
   const cdlClassSelect = document.querySelector("#cdl-class");
 
-  // Only run on the application page
+  // Only run on application page
   if (!jobTitleEl || !jobTitleInput || !jobIdInput) {
     return;
   }
 
+  // Keep browser/page title generic
+  document.title = "Apply in 60 Seconds | Goode Companies of Florida";
+
+  // -----------------------------------------------
   // CDL behavior
+  // -----------------------------------------------
+
   if (hasCdlSelect && cdlClassSelect) {
     hasCdlSelect.addEventListener("change", handleCdlChange);
 
@@ -64,13 +70,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const selectedJobId = localStorage.getItem("selectedJobId");
+  // -----------------------------------------------
+  // Get specific job from URL
+  // -----------------------------------------------
 
-  if (!selectedJobId) {
-    console.error("No selected job ID found in localStorage.");
-    renderMissingJob();
-    return;
-  }
+  const params = new URLSearchParams(window.location.search);
+
+  const selectedJobId = params.get("job");
+
+  // -----------------------------------------------
+  // Load careers
+  // -----------------------------------------------
 
   fetch("./data/careers.json")
     .then((response) => {
@@ -83,27 +93,106 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then((data) => {
-      const selectedJob = data.jobs.find((job) => job.id === selectedJobId);
-
-      if (!selectedJob) {
-        console.error("No job found with ID:", selectedJobId);
-        renderMissingJob();
-        return;
+      if (!Array.isArray(data.jobs)) {
+        throw new Error("No jobs found in careers.json.");
       }
 
-      populateApplication(selectedJob);
+      populateJobOptions(data.jobs);
+
+      // Specific job application
+      if (selectedJobId) {
+        const selectedJob = data.jobs.find((job) => job.id === selectedJobId);
+
+        if (selectedJob) {
+          selectJob(selectedJob);
+          return;
+        }
+
+        console.warn("Job ID from URL was not found:", selectedJobId);
+      }
+
+      // General application
+      renderGeneralApplication();
     })
     .catch((error) => {
-      console.error("Unable to load selected job:", error);
-      renderMissingJob();
+      console.error("Unable to load positions:", error);
+
+      renderGeneralApplication();
     });
+
+  // -----------------------------------------------
+  // User changes position
+  // -----------------------------------------------
+
+  jobTitleInput.addEventListener("change", () => {
+    const selectedOption = jobTitleInput.options[jobTitleInput.selectedIndex];
+
+    const selectedTitle = selectedOption.value;
+
+    const selectedId = selectedOption.dataset.jobId || "";
+
+    jobIdInput.value = selectedId;
+
+    if (selectedTitle) {
+      jobTitleEl.textContent = selectedTitle;
+    }
+  });
+
+  // -----------------------------------------------
+  // Populate dropdown
+  // -----------------------------------------------
+
+  function populateJobOptions(jobs) {
+    jobs.forEach((job) => {
+      const displayTitle = job.shortTitle || job.title;
+
+      const option = document.createElement("option");
+
+      option.value = displayTitle;
+      option.textContent = displayTitle;
+      option.dataset.jobId = job.id;
+
+      jobTitleInput.appendChild(option);
+    });
+  }
+
+  // -----------------------------------------------
+  // Specific job
+  // -----------------------------------------------
+
+  function selectJob(job) {
+    const displayTitle = job.shortTitle || job.title;
+
+    jobTitleInput.value = displayTitle;
+
+    jobIdInput.value = job.id;
+
+    jobTitleEl.textContent = displayTitle;
+  }
+
+  // -----------------------------------------------
+  // General application
+  // -----------------------------------------------
+
+  function renderGeneralApplication() {
+    jobTitleInput.value = "";
+    jobIdInput.value = "";
+
+    jobTitleEl.textContent = "a position that interests you";
+  }
+
+  // -----------------------------------------------
+  // CDL behavior
+  // -----------------------------------------------
 
   function handleCdlChange() {
     const hasCdl = hasCdlSelect.value === "Yes";
 
     if (!hasCdl) {
       cdlClassSelect.value = "N/A";
+
       cdlClassSelect.setAttribute("aria-disabled", "true");
+
       cdlClassSelect.classList.add("is-locked");
 
       return;
@@ -114,52 +203,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     cdlClassSelect.removeAttribute("aria-disabled");
+
     cdlClassSelect.classList.remove("is-locked");
-  }
-
-  function populateApplication(job) {
-    const displayTitle = job.shortTitle || job.title;
-
-    jobTitleEl.textContent = displayTitle;
-    jobTitleInput.value = displayTitle;
-    jobIdInput.value = job.id;
-
-    document.title = `${displayTitle} Application | Goode Companies of Florida`;
-  }
-
-  function renderMissingJob() {
-    jobTitleEl.textContent = "Position Not Selected";
-    jobTitleInput.value = "";
-    jobIdInput.value = "";
-
-    if (!applicationForm) {
-      return;
-    }
-
-    applicationForm.innerHTML = `
-      <div class="application-missing-job text-center">
-
-        <i
-          class="bi bi-briefcase"
-          aria-hidden="true"
-        ></i>
-
-        <h2>Select a Position First</h2>
-
-        <p>
-          Choose one of our open positions before
-          starting your application.
-        </p>
-
-        <a
-          href="careers.html"
-          class="btn btn-primary"
-        >
-          View Open Positions
-        </a>
-
-      </div>
-    `;
   }
 });
 
@@ -305,10 +350,11 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  const selectedJobId = localStorage.getItem("selectedJobId");
+  const params = new URLSearchParams(window.location.search);
+  const selectedJobId = params.get("job");
 
   if (!selectedJobId) {
-    console.error("No selected job ID found in localStorage.");
+    console.error("No job ID found in URL.");
     renderJobNotFound();
     return;
   }
@@ -447,7 +493,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="col-lg-4 d-none d-lg-flex justify-content-lg-end">
 
               <a
-                href="apply.html"
+                href="apply.html?job=${encodeURIComponent(job.id)}"
                 class="btn btn-danger job-detail-hero-apply"
               >
                 Apply Now
@@ -475,7 +521,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="d-lg-none mb-4">
 
                 <a
-                  href="apply.html"
+                  href="apply.html?job=${encodeURIComponent(job.id)}"
                   class="btn btn-danger w-100 job-detail-mobile-apply"
                 >
                   Apply for ${job.shortTitle || job.title}
@@ -683,7 +729,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   </p>
 
                   <a
-                    href="apply.html"
+                    href="apply.html?job=${encodeURIComponent(job.id)}"
                     class="btn btn-danger w-100 job-detail-apply-button"
                   >
                     Apply Now
@@ -805,7 +851,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="col-lg-4 text-lg-end">
 
               <a
-                href="apply.html"
+                href="apply.html?job=${encodeURIComponent(job.id)}"
                 class="btn btn-light job-detail-bottom-apply"
               >
                 Apply for ${job.shortTitle || job.title}

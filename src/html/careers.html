@@ -208,8 +208,7 @@
 
     <script>
       function selectJob(jobId) {
-        localStorage.setItem("selectedJobId", jobId);
-        window.location.href = "job-description.html";
+        window.location.href = `job-description.html?job=${encodeURIComponent(jobId)}`;
       }
     </script>
   </body>

@@ -14,6 +14,8 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 const mergeJSON = require("handlebars-webpack-plugin/utils/mergeJSON");
 
+const buildVersion = Date.now();
+
 // ==================================================
 // Load JSON Data for Handlebars
 // ==================================================
@@ -22,6 +24,7 @@ const projectData = mergeJSON(
   path.join(__dirname, "src", "data", "**", "*.json"),
 );
 
+projectData.buildVersion = buildVersion;
 // ==================================================
 // Project Paths
 // ==================================================
